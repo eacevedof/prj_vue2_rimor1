@@ -103,7 +103,7 @@ get_users : function() {
 - Se crea un proyecto básico en laravel con una bd simple y datos
 - Se configura una ruta **get** y en el callback se devuelven los datos
 - Para evitar el conflicto con **blade** se antepone un **@**
-- [Laravel - ](https://www.youtube.com/watch?v=5EKLN_1mNW8&t=72s)
+- [Laravel CRUD con Vue](https://www.youtube.com/watch?v=5EKLN_1mNW8&t=72s)
 - **comando:** `composer create-project laravel/laravel your-project-name`
 
 ## 8 - [xxx](yyy)
