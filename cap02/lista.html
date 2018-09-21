@@ -8,6 +8,7 @@
     <div id="main">
         <ul>
             <li v-for="name in people">{{name}}</li>
+            <li v-for="name in people" v-text="name"></li>
         </ul>
         <input type="text" v-model="name" v-on:keyup.enter="add_name">
     </div>
@@ -15,7 +16,7 @@
 <!--<script src="../js/vue_2.5.17.js"></script>-->
 <script>
 new Vue({
-    el: "#main",
+    el: "#main",//el wrapper donde apuntara este objeto vue
     data:{
         name: "",
         people: ["Linda","Isabella","Diana","Luisa"]
