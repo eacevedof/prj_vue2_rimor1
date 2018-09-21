@@ -106,7 +106,10 @@ get_users : function() {
 - [Laravel CRUD con Vue](https://www.youtube.com/watch?v=5EKLN_1mNW8&t=72s)
 - **comando:** `composer create-project laravel/laravel your-project-name`
 
-## 8 - [xxx](yyy)
+## 8 - [Tutorial de VUE, Directivas y V-SHOW](https://www.youtube.com/watch?v=Yt6cOb5Ukn0&index=8&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+- 
+
+
 ## 9 - [xxx](yyy)
 ## 10 - [xxx](yyy)
 ## 11 - [xxx](yyy)
