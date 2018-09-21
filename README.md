@@ -145,6 +145,7 @@ Forma incorrecta de usar v-if
 ```
 - Se podria agrupar con una sola llamada al metodo usando un tag `<form></form>`
 - **v-on:submit.prevent** prevent evita el refresco del formulario que es el comportamiento normal
+- **v-on:click="num+=1"** operación dentro del evento
 ```html
 <form v-on:submit.prevent="add">
     <div class="input-group">
@@ -154,6 +155,13 @@ Forma incorrecta de usar v-if
         </span>
     </div>
 </form>
+```
+```js
+add: function(){
+        this.people.unshift(this.name)//al principio de la lista
+        this.people.push(this.name)//al final
+        this.name = ""
+    }
 ```
 
 ## 11 - [xxx](yyy)

@@ -25,6 +25,11 @@
                     <ul class="list-group">
                         <li class="list-group-item" v-for="nombre in people" v-text="nombre"></li>
                     </ul>
+                </div>
+                <div class="col-md-4">
+                    <button v-on:click="num+=1">
+                       {{ num }} <i class="glyphicon glyphicon-thumbs-up"></i>
+                    </button>
                 </div>            
             </div>
             <div class="row">
@@ -41,11 +46,13 @@ new Vue({
 
     data:{
         people: ["Nombre1","Nombre2","Nombre3","Nombre4"],
-        name: ""
+        name: "",
+        num:0,
     },//data
     
     methods:{
         add: function(){
+            this.people.unshift(this.name)
             this.people.push(this.name)
             this.name = ""
         }
