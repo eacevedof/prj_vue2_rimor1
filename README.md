@@ -69,7 +69,7 @@ new Vue({
 - [randomuser - get fake json](https://randomuser.me/documentation#results)
     - [results - 50 regs](https://randomuser.me/api/?results=50)
 - [Lifecycle diagram](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
-- <img src="https://vuejs.org/images/lifecycle.png" width="300" height="600" />
+- <img src="https://vuejs.org/images/lifecycle.png" width="150" height="400" />
 - **error:**
     Se da por la llamada `{{ $data | json }}`
     ```
