@@ -52,6 +52,7 @@ new Vue({
 })//new Vue
 ```
 ## 3 - [Vinculación de datos con #VUE - Data Binding con V-BIND](https://www.youtube.com/watch?v=rKgc4g3lPHc&index=3&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+- [v-bind.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video03/v-bind.html)
 - Con **v-bind** se vincula una propiedad con una variable dentro de `data`
 - **v-model** indica a un elemento html que será de tipo dinámico y que su "valor" será asignado a la variable mapeada con el `=`. Ejemplo `v-model="info"`
 - Se configura el input enlazandolo con la variable data.info
@@ -60,6 +61,7 @@ new Vue({
 - `<p v-bind:title="info">Texto de relleno {{info}}</p>`
 
 ## 4 - [VUEjs y AJAX, manejo de respuesta JSON con VUE-RESOURCE](https://www.youtube.com/watch?v=yqnT2VzJHHI&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=4)
+- [ajax.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video04/ajax.html)
 - [cdnjs.com/](https://cdnjs.com/)
     - buscamos `vue resource`
     - encontramos `https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js`
@@ -96,6 +98,7 @@ get_users : function() {
 - Si eres nuevo en vue es recomendable usar axios
 
 ## 6 - [VUE y AJAX con AXIOS - Qué es una API](https://www.youtube.com/watch?v=rJCtdKoPnlE&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=6)
+- [ajax.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video06/ajax.html)
 - [Github - Axios](https://github.com/axios/axios)
 - `<script src="https://unpkg.com/axios/dist/axios.min.js"></script>`
 
@@ -107,6 +110,7 @@ get_users : function() {
 - **comando:** `composer create-project laravel/laravel your-project-name`
 
 ## 8 - [Tutorial de VUE, Directivas y V-SHOW](https://www.youtube.com/watch?v=Yt6cOb5Ukn0&index=8&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+- [v-show.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video08/v-show.html)
 - `<input type="text" v-model="email" class="form-control">`
 - `<input type="submit" v-show="email" class="btn btn-primary">`
 - **v-show** trabaja bajo condicional. Si la variable asociada tiene un valor es true si está vacia false
@@ -114,6 +118,7 @@ get_users : function() {
 - Aplica estilo **display:none** para ocultar
 
 ## 9 - [Directivas V-IF V-ELSE y TEMPLATE ](https://www.youtube.com/watch?v=Ktkh_ErWKzI&index=9&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+- [v-if.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video09/v-if.html)
 - **v-if**
 - **v-else**
 ```html
@@ -136,6 +141,7 @@ Forma incorrecta de usar v-if
 - Según rendimiento v-show consume más recursos
 
 ## 10 - [Eventos en VUE - JavaScript ](https://www.youtube.com/watch?v=rC4KCh8YfP4&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=10)
+- [eventos.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video10/eventos.html)
 - Actualmente se llama al metodo add desde dos puntos
 ```html
 <input type="text" class="form-control" v-on:keyup.enter="add" v-model="name">
