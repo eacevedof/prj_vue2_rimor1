@@ -1,5 +1,7 @@
 # prj_vue2_rimor1
+- Este proyecto: https://github.com/eacevedof/prj_vue2_rimor1
 - Proyecto siguiendo el video tutorial de youtube de Rimorsoft Online
+- [Twitter del autor @ItaloMoralesF](https://twitter.com/ItaloMoralesF)
 - [Web oficial del Autor](https://rimorsoft.com/)
 
 ## [Youtube playlist - Curso de Vuejs 2 by Rimorsoft Online:](https://www.youtube.com/playlist?list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
@@ -17,7 +19,7 @@
     - [dev - open in new window](https://vuejs.org/js/vue.js)
     - `<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>` 
     - 
-    
+
 ## 3 - [xxx](yyy)
 ## 4 - [xxx](yyy)
 ## 5 - [xxx](yyy)
