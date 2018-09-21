@@ -9,6 +9,7 @@
         <ul>
             <li v-for="name in people">{{name}}</li>
         </ul>
+        <input type="text" v-model="name" v-on:keyup.enter="add_name">
     </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <!--<script src="../js/vue_2.5.17.js"></script>-->
@@ -17,6 +18,14 @@ new Vue({
     el: "#main",
     data:{
         people: ["Linda","Isabella","Diana","Luisa"]
+    },
+    name: "", //variable tipo v-model
+    methods:{
+        //metodo tipo v-on:keyup.enter
+        add_name: function(){
+            this.people.push(this.name)
+            this.name = ""
+        }
     }
 })
 </script>

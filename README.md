@@ -20,8 +20,9 @@
     - [vuejs.org/js/vue.js - nueva ventana](https://vuejs.org/js/vue.js)
     - `<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>` 
 - **comando:** `php -S localhost:3300`
-- `<li v-for="name in people">{{name}}</li>`
+- **v-for** `<li v-for="name in people">{{name}}</li>`
 - En `data` se agregan las variables que se podrán alcanzar directamente con las directivas de vue
+- **v-model** y **v-on:keyup.enter** `v-model="name" v-on:keyup.enter="add_name">`
 
 ## 3 - [xxx](yyy)
 ## 4 - [xxx](yyy)
