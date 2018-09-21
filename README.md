@@ -70,6 +70,12 @@ new Vue({
     - [results - 50 regs](https://randomuser.me/api/?results=50)
 - [Lifecycle diagram](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
 <img src="https://vuejs.org/images/lifecycle.png" width="300" height="600" />
+- **error:**
+    ```error
+    [Vue warn]: Failed to resolve filter: json
+    (found in <Anonymous>)
+    ```
+    **solución:**
 
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)
