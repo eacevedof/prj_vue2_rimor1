@@ -52,6 +52,12 @@ new Vue({
 })//new Vue
 ```
 ## 3 - [Vinculación de datos con #VUE - Data Binding con V-BIND](https://www.youtube.com/watch?v=rKgc4g3lPHc&index=3&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+- Con **v-bind** se vincula una propiedad con una variable dentro de `data`
+- **v-model** indica a un elemento html que será de tipo dinámico y que su "valor" será asignado a la variable mapeada con el `=`. Ejemplo `v-model="info"`
+- Se configura el input enlazandolo con la variable data.info
+- `<input type="text" v-model="info">`
+- Se configura la propiedad title y el innertext para que escuchen cambios en la variable info
+- `<p v-bind:title="info">Texto de relleno {{info}}</p>`
 
 ## 4 - [xxx](yyy)
 ## 5 - [xxx](yyy)

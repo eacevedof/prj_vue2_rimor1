@@ -7,7 +7,7 @@
 <body>
     <div id="main">
         <input type="text" v-model="info">
-        <p>Texto de relleno {{info}}</p>
+        <p v-bind:title="info">Texto de relleno {{info}}</p>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
