@@ -107,8 +107,9 @@ get_users : function() {
 - **comando:** `composer create-project laravel/laravel your-project-name`
 
 ## 8 - [Tutorial de VUE, Directivas y V-SHOW](https://www.youtube.com/watch?v=Yt6cOb5Ukn0&index=8&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
-- 
-
+- `<input type="submit" v-show="email" class="btn btn-primary">`
+- **v-show** trabaja bajo condicional. Si la variable asociada tiene un valor es true si está vacia false
+- Aplica estilo **display:none** para ocultar
 
 ## 9 - [xxx](yyy)
 ## 10 - [xxx](yyy)
