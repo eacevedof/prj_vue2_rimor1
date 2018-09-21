@@ -51,7 +51,8 @@ new Vue({
     }//methods
 })//new Vue
 ```
-## 3 - [xxx](yyy)
+## 3 - [Vinculación de datos con #VUE - Data Binding con V-BIND](https://www.youtube.com/watch?v=rKgc4g3lPHc&index=3&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+
 ## 4 - [xxx](yyy)
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)
