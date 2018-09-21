@@ -32,6 +32,25 @@
      See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
     (found in <Root>)
     ```
+    **solución**
+    - `name` no puede ir fuera de `data`
+- `this` apunta al objeto `data`
+```js
+new Vue({
+    el: "#main",
+    data:{
+        name: "",
+        people: ["Linda","Isabella","Diana","Luisa"]
+    },//data
+    methods:{
+        //metodo tipo v-on:keyup.enter
+        add_name: function(){
+            this.people.push(this.name)
+            this.name = ""
+        }//add_name
+    }//methods
+})//new Vue
+```
 ## 3 - [xxx](yyy)
 ## 4 - [xxx](yyy)
 ## 5 - [xxx](yyy)

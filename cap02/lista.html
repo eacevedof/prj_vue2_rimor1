@@ -17,17 +17,18 @@
 new Vue({
     el: "#main",
     data:{
+        name: "",
         people: ["Linda","Isabella","Diana","Luisa"]
-    },
-    name: "", //variable tipo v-model
+    },//data
+    
     methods:{
         //metodo tipo v-on:keyup.enter
         add_name: function(){
             this.people.push(this.name)
             this.name = ""
-        }
-    }
-})
+        }//add_name
+    }//methods
+})//new Vue
 </script>
 </body>
 </html>
