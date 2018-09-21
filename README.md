@@ -95,7 +95,7 @@ get_users : function() {
 - Axios es una biblioteca muy popular
 - Si eres nuevo en vue es recomendable usar axios
 
-## 6 - [xxx](yyy)
+## 6 - [VUE y AJAX con AXIOS - Qué es una API](https://www.youtube.com/watch?v=rJCtdKoPnlE&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=6)
 ## 7 - [xxx](yyy)
 ## 8 - [xxx](yyy)
 ## 9 - [xxx](yyy)
