@@ -136,7 +136,25 @@ Forma incorrecta de usar v-if
 - Según rendimiento v-show consume más recursos
 
 ## 10 - [Eventos en VUE - JavaScript ](https://www.youtube.com/watch?v=rC4KCh8YfP4&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=10)
-- 
+- Actualmente se llama al metodo add desde dos puntos
+```html
+<input type="text" class="form-control" v-on:keyup.enter="add" v-model="name">
+<span class="input-group-btn">
+    <input type="button" class="btn btn-default" v-on:click="add" value="add">
+</span>
+```
+- Se podria agrupar con una sola llamada al metodo usando un tag `<form></form>`
+- **v-on:submit.prevent** prevent evita el refresco del formulario que es el comportamiento normal
+```html
+<form v-on:submit.prevent="add">
+    <div class="input-group">
+        <input type="text" class="form-control" v-model="name">
+        <span class="input-group-btn">
+            <input type="submit" class="btn btn-default" value="add">
+        </span>
+    </div>
+</form>
+```
 
 ## 11 - [xxx](yyy)
 ## 12 - [xxx](yyy)
