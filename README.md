@@ -59,7 +59,13 @@ new Vue({
 - Se configura la propiedad title y el innertext para que escuchen cambios en la variable info
 - `<p v-bind:title="info">Texto de relleno {{info}}</p>`
 
-## 4 - [xxx](yyy)
+## 4 - [VUEjs y AJAX, manejo de respuesta JSON con VUE-RESOURCE](https://www.youtube.com/watch?v=yqnT2VzJHHI&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=4)
+- [cdnjs.com/](https://cdnjs.com/)
+    - buscamos `vue resource`
+    - encontramos `https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js`
+- `<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>`
+
+
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)
 ## 7 - [xxx](yyy)
