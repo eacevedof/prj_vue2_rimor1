@@ -89,7 +89,12 @@ get_users : function() {
 - **$data** propiedad [vue.$data](https://vuejs.org/v2/api/#data) 
 
 ## 5 - [VUE-RESOURCE y AXIOS - Tecnologías AJAX para VUEjs](https://www.youtube.com/watch?v=WKOZ2xPWURU&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=5)
-- 
+- Vue dejo de recomendar **vue-resource** pertenece a pagekit
+- Ahora se usa **axios** pertenece a mzabriske
+- Se puede utilizar la que desees
+- Axios es una biblioteca muy popular
+- Si eres nuevo en vue es recomendable usar axios
+
 ## 6 - [xxx](yyy)
 ## 7 - [xxx](yyy)
 ## 8 - [xxx](yyy)
