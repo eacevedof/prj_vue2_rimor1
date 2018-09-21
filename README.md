@@ -113,7 +113,9 @@ get_users : function() {
 - En este caso `v-show -> apunta a -> v-model`
 - Aplica estilo **display:none** para ocultar
 
-## 9 - [xxx](yyy)
+## 9 - [Directivas V-IF V-ELSE y TEMPLATE ](https://www.youtube.com/watch?v=Ktkh_ErWKzI&index=9&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+- 
+
 ## 10 - [xxx](yyy)
 ## 11 - [xxx](yyy)
 ## 12 - [xxx](yyy)
