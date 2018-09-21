@@ -9,25 +9,25 @@
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-md-12">
                     <h2>Eventos en Vuejs</h2>
                 </div>
-
-                <div class="col-xs-4">
+                <div class="col-md-4">
                     <div class="input-group">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" v-on:keyup.enter="add" v-model="name">
                         <span class="input-group-btn">
-                            <input type="button" class="btn btn-default" value="add">
+                            <input type="button" class="btn btn-default" v-on:click="add" value="add">
                         </span>
                     </div>
                     <hr/>
                     <ul class="list-group">
-                        <li class="list-group-item"></li>
+                        <li class="list-group-item" v-for="nombre in people" v-text="nombre"></li>
                     </ul>
-
-                    <h3>JSON</h3>
-                    <pre> {{$data}} </pre>
                 </div>            
+            </div>
+            <div class="row">
+                <h3>JSON</h3>
+                <pre> {{$data}} </pre>
             </div>
         </div>
     </div>
@@ -38,12 +38,14 @@ new Vue({
     el: "#main",
 
     data:{
-        people: ["Nombre1","Nombre2","Nombre3","Nombre4"]
+        people: ["Nombre1","Nombre2","Nombre3","Nombre4"],
+        name: ""
     },//data
     
     methods:{
         add: function(){
-
+            this.people.push(this.name)
+            this.name = ""
         }
     }//methods
 
