@@ -99,7 +99,12 @@ get_users : function() {
 - [Github - Axios](https://github.com/axios/axios)
 - `<script src="https://unpkg.com/axios/dist/axios.min.js"></script>`
 
-## 7 - [xxx](yyy)
+## 7 - [LARAVEL y VUE - Introducción, uso de AJAX](https://www.youtube.com/watch?v=YDyray6KQ4w&index=7&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+- Se crea un proyecto básico en laravel con una bd simple y datos
+- Se configura una ruta **get** y en el callback se devuelven los datos
+- Para evitar el conflicto con **blade** se antepone un **@**
+-
+
 ## 8 - [xxx](yyy)
 ## 9 - [xxx](yyy)
 ## 10 - [xxx](yyy)
