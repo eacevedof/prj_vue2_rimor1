@@ -71,6 +71,7 @@ new Vue({
 - [Lifecycle diagram](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
 - <img src="https://vuejs.org/images/lifecycle.png" width="300" height="600" />
 - **error:**
+    Se da por la llamada `{{ $data | json }}`
     ```
     [Vue warn]: Failed to resolve filter: json
     (found in <Anonymous>)
@@ -85,7 +86,7 @@ get_users : function() {
     })
 }//get_users
 ```
-- **$data** propiedad [vue.$data](https://vuejs.org/v2/api/#vm-data) 
+- **$data** propiedad [vue.$data](https://vuejs.org/v2/api/#data) 
 
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)
