@@ -76,6 +76,7 @@ new Vue({
     (found in <Anonymous>)
     ```
     **solución:**
+    - In Vue 2.0, you don’t need to use the filter, just use: {{ $data }}
 
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)

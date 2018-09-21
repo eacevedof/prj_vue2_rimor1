@@ -10,11 +10,16 @@
         <div class="row">
             <div class="col-sm-4">
                 <h1>Lista Vuejs - Ajax</h1>
+                <ul class="list-group">
+                    <li v-for="user in lista" class="list-group-item">
+                        {{ user.name.first }} {{ user.name.last }}
+                    </li>
+                </ul>
             </div>
             <div class="col-sm-8">
                 <h1>JSON</h1>
-                <pre>
-                    {{ $data | json}}
+                <pre style="background:#e0e0e0">
+                    {{ $data }}
                 </pre>
             </div>
         </div>
@@ -41,7 +46,7 @@ new Vue({
     methods:{
         get_users : function() {
             this.$http.get(sUrlJson).then(function(response){
-                this.lista = response
+                this.lista = response.data.results
             })
         }//get_users
 
