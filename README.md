@@ -135,7 +135,9 @@ Forma incorrecta de usar v-if
 - Si no necesitamos else usamos v-show
 - Según rendimiento v-show consume más recursos
 
-## 10 - [xxx](yyy)
+## 10 - [Eventos en VUE - JavaScript ](https://www.youtube.com/watch?v=rC4KCh8YfP4&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=10)
+- 
+
 ## 11 - [xxx](yyy)
 ## 12 - [xxx](yyy)
 ## 13 - [xxx](yyy)
