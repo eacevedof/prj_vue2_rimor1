@@ -17,7 +17,7 @@
 
 ## 2 - [Renderización de listas VUEjs - V-FOR](https://www.youtube.com/watch?v=_RKC6a8-Ic0&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=2)
 - [CDN](https://vuejs.org/v2/guide/installation.html#CDN)
-    - [dev - open in new window](https://vuejs.org/js/vue.js)
+    - [vuejs.org/js/vue.js - nueva ventana](https://vuejs.org/js/vue.js)
     - `<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>` 
     - 
 
