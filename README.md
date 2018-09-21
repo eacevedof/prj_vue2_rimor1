@@ -1,4 +1,5 @@
 # prj_vue2_rimor1
+- 21/09/2018
 - Este proyecto: https://github.com/eacevedof/prj_vue2_rimor1
 - Proyecto siguiendo el video tutorial de youtube de Rimorsoft Online
 - [Twitter del autor @ItaloMoralesF](https://twitter.com/ItaloMoralesF)
