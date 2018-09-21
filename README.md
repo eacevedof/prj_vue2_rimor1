@@ -88,7 +88,8 @@ get_users : function() {
 ```
 - **$data** propiedad [vue.$data](https://vuejs.org/v2/api/#data) 
 
-## 5 - [xxx](yyy)
+## 5 - [VUE-RESOURCE y AXIOS - Tecnologías AJAX para VUEjs](https://www.youtube.com/watch?v=WKOZ2xPWURU&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=5)
+- 
 ## 6 - [xxx](yyy)
 ## 7 - [xxx](yyy)
 ## 8 - [xxx](yyy)
