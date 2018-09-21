@@ -64,7 +64,8 @@ new Vue({
     - buscamos `vue resource`
     - encontramos `https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js`
 - `<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>`
-
+- [bootstrap](http://getbootstrap.com/)
+- `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">`
 
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)
