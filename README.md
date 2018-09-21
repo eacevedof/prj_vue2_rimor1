@@ -12,7 +12,7 @@
     - Html5
     - Bootstrap
 
-## 2 - [xxx](yyy)
+## 2 - [Renderización de listas VUEjs - V-FOR](https://www.youtube.com/watch?v=_RKC6a8-Ic0&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=2)
 
 ## 3 - [xxx](yyy)
 ## 4 - [xxx](yyy)
