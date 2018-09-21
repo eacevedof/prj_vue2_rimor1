@@ -168,4 +168,5 @@ add: function(){
 -
 
 ## 12 - [xxx](yyy)
-## 13 - [xxx](yyy)
+
+## 13 - [Resumen de lo aprendido](https://www.youtube.com/watch?v=KyCWibMdZjk&index=13&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
