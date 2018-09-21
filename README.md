@@ -66,6 +66,10 @@ new Vue({
 - `<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>`
 - [bootstrap](http://getbootstrap.com/)
 - `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">`
+- [randomuser - get fake json](https://randomuser.me/documentation#results)
+    - [results - 50 regs](https://randomuser.me/api/?results=50)
+- [Lifecycle diagram](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
+<img src="https://vuejs.org/images/lifecycle.png" width="300" height="600" />
 
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)
