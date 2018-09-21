@@ -114,7 +114,14 @@ get_users : function() {
 - Aplica estilo **display:none** para ocultar
 
 ## 9 - [Directivas V-IF V-ELSE y TEMPLATE ](https://www.youtube.com/watch?v=Ktkh_ErWKzI&index=9&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
-- 
+- **v-if**
+- **v-else**
+```html
+Forma incorrecta de usar v-if
+<h3 v-if="!message">Escribe tu sugerencia</h3>
+<p v-if="!message">El equipo de soporte responde en máximo 24 horas</p>
+<p v-if="!message"><em>Podrías utilizar Twitter para comunicarte</em></p>
+```
 
 ## 10 - [xxx](yyy)
 ## 11 - [xxx](yyy)
