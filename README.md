@@ -131,6 +131,9 @@ Forma incorrecta de usar v-if
 </template>
 <h3 v-else>Presiona ENTER para enviar</h3>
 ```
+- **v-show** vs **v-if** [min: 06:10](https://youtu.be/Ktkh_ErWKzI?list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&t=370)
+- Si no necesitamos else usamos v-show
+- Según rendimiento v-show consume más recursos
 
 ## 10 - [xxx](yyy)
 ## 11 - [xxx](yyy)
