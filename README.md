@@ -2,7 +2,7 @@
 - Proyecto siguiendo el video tutorial de youtube de Rimorsoft Online
 - [Web oficial del Autor](https://rimorsoft.com/)
 
-## [Youtube playlist- Curso de Vuejs 2 by Rimorsoft Online](https://www.youtube.com/playlist?list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
+## [Youtube playlist - Curso de Vuejs 2 by Rimorsoft Online:](https://www.youtube.com/playlist?list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
 
 ## 1 - [Bienvenidos al curso de VUE 2 | Rimorsoft Online](https://www.youtube.com/watch?v=omCGk5Qup9Q&index=2&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&t=0s)
 
