@@ -77,6 +77,15 @@ new Vue({
     ```
     **solución:**
     - In Vue 2.0, you don’t need to use the filter, just use: {{ $data }}
+- **$http** se puede contar con este objeto gracias a **vue-resource**
+```js
+get_users : function() {
+    this.$http.get(sUrlJson).then(function(response){
+        this.lista = response.data.results
+    })
+}//get_users
+```
+- **$data** propiedad [vue.$data](https://vuejs.org/v2/api/#vm-data) 
 
 ## 5 - [xxx](yyy)
 ## 6 - [xxx](yyy)
