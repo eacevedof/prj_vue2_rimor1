@@ -1,4 +1,6 @@
 # prj_vue2_rimor1
+- Proyecto siguiendo el video tutorial de youtube de Rimorsoft Online
+- [Web oficial del Autor](https://rimorsoft.com/)
 
 ## [Youtube - Curso de Vuejs 2 by Rimorsoft Online](https://www.youtube.com/playlist?list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
 
