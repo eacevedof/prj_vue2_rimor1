@@ -10,7 +10,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-
+                    <h3 v-if="!message">Escribe tu sugerencia</h3>
+                    <h3 v-if="message">Presiona ENTER para enviar</h3>
+                    <textarea v-model="message"></textarea>
                 </div>
                 <div class="col-md-5">
                     <h3>JSON</h3>
@@ -26,7 +28,7 @@ new Vue({
     el: "#main",
 
     data:{
-
+        message: ""
     },//data
     
     methods:{
