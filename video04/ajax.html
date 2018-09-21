@@ -12,13 +12,13 @@
                 <h1>Lista Vuejs - Ajax</h1>
                 <ul class="list-group">
                     <li v-for="user in lista" class="list-group-item">
-                        {{ user.name.first }} {{ user.name.last }}
+                       {{user.name}} {{user.email}}
                     </li>
                 </ul>
             </div>
             <div class="col-sm-8">
                 <h1>JSON</h1>
-                <pre style="background:#e0e0e0">
+                <pre style="background:#e0e0e0; border:1px solid #ccc">
                     {{ $data }}
                 </pre>
             </div>
@@ -29,7 +29,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
 <!--<script src="../js/vue_2.5.17.js"></script>-->
 <script>
-const sUrlJson = "https://randomuser.me/api/?results=50"
+//const sUrlJson = "https://randomuser.me/api/?results=50"
+const sUrlJson = "https://jsonplaceholder.typicode.com/users"
 
 new Vue({
     el: "#main",
@@ -46,7 +47,7 @@ new Vue({
     methods:{
         get_users : function() {
             this.$http.get(sUrlJson).then(function(response){
-                this.lista = response.data.results
+                this.lista = response.data
             })
         }//get_users
 
