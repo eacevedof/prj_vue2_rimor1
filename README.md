@@ -164,6 +164,8 @@ add: function(){
     }
 ```
 
-## 11 - [xxx](yyy)
+## 11 - [Filtros en VUE.js usando Computed Properties - AJAX](https://www.youtube.com/watch?v=eB17ef_TVrA&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=11)
+-
+
 ## 12 - [xxx](yyy)
 ## 13 - [xxx](yyy)
