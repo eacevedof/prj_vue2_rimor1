@@ -10,9 +10,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h3 v-if="!message">Escribe tu sugerencia</h3>
-                    <p v-if="!message">El equipo de soporte responde en máximo 24 horas</p>
-                    <p v-if="!message"><em>Podrías utilizar Twitter para comunicarte</em></p>
+                    <template v-if="!message">
+                        <h3>Escribe tu sugerencia</h3>
+                        <p>El equipo de soporte responde en máximo 24 horas</p>
+                        <p><em>Podrías utilizar Twitter para comunicarte</em></p>       
+                    </template>
                     <h3 v-else>Presiona ENTER para enviar</h3>
                     <textarea v-model="message"></textarea>
                 </div>

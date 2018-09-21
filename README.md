@@ -122,6 +122,15 @@ Forma incorrecta de usar v-if
 <p v-if="!message">El equipo de soporte responde en máximo 24 horas</p>
 <p v-if="!message"><em>Podrías utilizar Twitter para comunicarte</em></p>
 ```
+- Forma correcta. Usando el tag `<template></template>`
+```html
+<template v-if="!message">
+    <h3>Escribe tu sugerencia</h3>
+    <p>El equipo de soporte responde en máximo 24 horas</p>
+    <p><em>Podrías utilizar Twitter para comunicarte</em></p>       
+</template>
+<h3 v-else>Presiona ENTER para enviar</h3>
+```
 
 ## 10 - [xxx](yyy)
 ## 11 - [xxx](yyy)
