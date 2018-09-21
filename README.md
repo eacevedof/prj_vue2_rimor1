@@ -23,7 +23,15 @@
 - **v-for** `<li v-for="name in people">{{name}}</li>`
 - En `data` se agregan las variables que se podrán alcanzar directamente con las directivas de vue
 - **v-model** y **v-on:keyup.enter** `v-model="name" v-on:keyup.enter="add_name">`
-
+- **error:**
+    - Se da cuando se carga la página por primera vez. Pero funciona ^^
+    ```error
+    vue.js:597 [Vue warn]: Property or method "name" is not defined on the instance but referenced
+     during render. Make sure that this property is reactive, either in the data option, or for 
+     class-based components, by initializing the property. 
+     See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+    (found in <Root>)
+    ```
 ## 3 - [xxx](yyy)
 ## 4 - [xxx](yyy)
 ## 5 - [xxx](yyy)
