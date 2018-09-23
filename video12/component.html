@@ -9,20 +9,12 @@
     <div id="main" class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h1>albums</h1>
-                <ul class="list-group">
-                    <li v-for="album in albums" class="list-group-item">
-                        {{ album.title }}
-                    </li>
-                </ul>
+                <h1>Albums</h1>
+                <common-list v-bind:list="albums"></common-list>
             </div>
             <div class="col-sm-4">
                 <h1>Posts</h1>
-                <ul class="list-group">
-                    <li v-for="post in posts" class="list-group-item">
-                        {{ post.title }}
-                    </li>
-                </ul>
+                <common-list v-bind:list="posts"></common-list>
             </div>            
             <div class="col-sm-12">
                 <h1>JSON</h1>
