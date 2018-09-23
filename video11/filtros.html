@@ -10,11 +10,13 @@
         <div class="row">
             <div class="col-sm-4">
                 <h1>Vuejs - Filtros</h1>
-                <button v-if="lista.length==0" class="btn btn-primary" v-on:click="get_users">Listar</button>
+                <button v-if="!lista.length" class="btn btn-primary" v-on:click="get_users">Listar</button>
                 <template v-else>
-                    <input type="text" v-model="name" v-on:keyup="get_filtered()" >
                     <ul>
-                        <li v-for="user in lista" class="list-group-item">{{ user.name }} {{ user.email }}</li>
+                        <li class="list-group-item">
+                            <input type="text" placeholder="Buscar" class="form-control" v-model="name" >
+                        </li>
+                        <li v-for="user in get_filtered" class="list-group-item">{{ user.name }} {{ user.email }}</li>
                     </ul>
                 </template>
             </div>
@@ -40,7 +42,7 @@ new Vue({
     },
 
     data:{
-        backup:[],
+        //backup:[],
         lista:[], //lista de usuarios
         name: "",
     },//data
@@ -49,15 +51,21 @@ new Vue({
         get_users : function() {
             axios.get(sUrlJson).then((response)=>{
                 this.lista = response.data
-                this.backup = response.data
+                //this.backup = response.data
             })
         },//get_users
 
-        get_filtered: function(){
-            this.lista = this.backup.filter(user => user.name.toLowerCase().includes(this.name.toLowerCase()))
-        },//get_filtered
+        //get_filtered: function(){
+          //  this.lista = this.backup.filter(user => user.name.toLowerCase().includes(this.name.toLowerCase()))
+        //},//get_filtered
 
-    }//methods
+    },//methods
+
+    computed: {
+        get_filtered: function(){
+            return this.lista.filter(user => user.name.toLowerCase().includes(this.name.toLowerCase()))
+        }//get_filtered
+    }//computed
 
 })//new Vue
 </script>
