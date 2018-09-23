@@ -51,14 +51,8 @@ new Vue({
         get_users : function() {
             axios.get(sUrlJson).then((response)=>{
                 this.lista = response.data
-                //this.backup = response.data
             })
         },//get_users
-
-        //get_filtered: function(){
-          //  this.lista = this.backup.filter(user => user.name.toLowerCase().includes(this.name.toLowerCase()))
-        //},//get_filtered
-
     },//methods
 
     computed: {

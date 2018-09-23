@@ -174,7 +174,17 @@ add: function(){
 - Botón listar que al ser presionado traera un número determinado de usuarios usando ajax.
 - Una vez mostrado el listado, el botón desaparecerá y se mostrará una caja de texto que permitirá hacer un
 filtrado sobre la lista en patanlla.
-- 
+- Una propiedad computada ayuda que se puedan instanciar resultados de funciones dentro de las directivas
+```html
+<li v-for="user in get_filtered" class="list-group-item">{{ user.name }} {{ user.email }}</li>
+```
+```js
+computed: {
+    get_filtered: function(){
+        return this.lista.filter(user => user.name.toLowerCase().includes(this.name.toLowerCase()))
+    }//get_filtered
+}//computed
+```
 
 ## 12 - [Componentes en VUEjs](https://www.youtube.com/watch?v=1u7dUgSwcpI&index=12&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
 - 
