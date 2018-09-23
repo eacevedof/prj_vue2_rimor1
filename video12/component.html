@@ -10,11 +10,11 @@
         <div class="row">
             <div class="col-sm-4">
                 <h1>Albums</h1>
-                <common-list v-bind:list="albums"></common-list>
+                <eaf-list v-bind:aritems="albums"/>
             </div>
             <div class="col-sm-4">
                 <h1>Posts</h1>
-                <common-list v-bind:list="posts"></common-list>
+                <eaf-list v-bind:aritems="posts"/>
             </div>            
             <div class="col-sm-12">
                 <h1>JSON</h1>
@@ -28,14 +28,16 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-Vue.component("common-list",{
-    props : ["list"],
+//"eaf-list" => <eaf-list></eaf-list>
+Vue.component("eaf-list",{
+    //son los atributos dentro del componente <micomp v-bind:mi_prop="some-var"/>
+    props : ["aritems"],
     template : `<ul class="list-group">
-                    <li v-for="item in list" class="list-group-item">
+                    <li v-for="item in aritems" class="list-group-item">
                         {{ item.title }}
                     </li>
                 </ul>`,
-})//common-list
+})//eaf-list
 
 new Vue({
     el: "#main",
