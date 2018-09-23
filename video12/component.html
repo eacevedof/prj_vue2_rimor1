@@ -15,7 +15,11 @@
             <div class="col-sm-4">
                 <h1>Posts</h1>
                 <eaf-list v-bind:aritems="posts"/>
-            </div>            
+            </div>      
+            <div class="col-sm-4">
+                <h1>Photos</h1>
+                <eaf-list v-bind:aritems="photos"/>
+            </div>                  
             <div class="col-sm-12">
                 <h1>JSON</h1>
                 <pre style="background:#e0e0e0; border:1px solid #ccc">
@@ -50,6 +54,10 @@ new Vue({
     data:{
         posts: [],
         albums: [],
+        photos: [
+            {title: "foto 1"},
+            {title: "foto 2"}
+        ],
     },//data
     
     methods:{
