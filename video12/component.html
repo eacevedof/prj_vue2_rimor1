@@ -9,18 +9,22 @@
     <div id="main" class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h1>Vuejs - Componentes</h1>
-                <button v-if="!lista.length" class="btn btn-primary" v-on:click="get_users">Listar</button>
-                <template v-else>
-                    <ul>
-                        <li class="list-group-item">
-                            <input type="text" placeholder="Buscar" class="form-control" v-model="name" >
-                        </li>
-                        <li v-for="user in get_filtered" class="list-group-item">{{ user.name }} {{ user.email }}</li>
-                    </ul>
-                </template>
+                <h1>Albumbs</h1>
+                <ul class="list-group">
+                    <li v-for="album in albums" class="list-group-item">
+                        {{ album.title }}
+                    </li>
+                </ul>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
+                <h1>Posts</h1>
+                <ul class="list-group">
+                    <li v-for="post in posts" class="list-group-item">
+                        {{ post.title }}
+                    </li>
+                </ul>
+            </div>            
+            <div class="col-sm-12">
                 <h1>JSON</h1>
                 <pre style="background:#e0e0e0; border:1px solid #ccc">
                     {{ $data }}
@@ -32,8 +36,6 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-const sUrlJson = "https://jsonplaceholder.typicode.com/users"
-
 new Vue({
     el: "#main",
 
@@ -42,15 +44,24 @@ new Vue({
     },
 
     data:{
-        lista:[],
+        posts: [],
+        albumbs: [],
     },//data
     
     methods:{
-        get_users : function() {
+        get_posts : function() {
+            const sUrlJson = "https://jsonplaceholder.typicode.com/posts"
             axios.get(sUrlJson).then((response)=>{
                 this.lista = response.data
             })
-        },//get_users
+        },//get_posts
+
+        get_albumbs : function() {
+            const sUrlJson = "https://jsonplaceholder.typicode.com/albums"
+            axios.get(sUrlJson).then((response)=>{
+                this.lista = response.data
+            })
+        },//get_albumbs        
     },//methods
 
     computed: {
