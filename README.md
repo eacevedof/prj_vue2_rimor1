@@ -189,4 +189,5 @@ computed: {
 ## 12 - [Componentes en VUEjs](https://www.youtube.com/watch?v=1u7dUgSwcpI&index=12&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
 - 
 
+
 ## 13 - [Resumen de lo aprendido](https://www.youtube.com/watch?v=KyCWibMdZjk&index=13&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
