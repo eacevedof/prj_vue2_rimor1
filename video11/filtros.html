@@ -9,7 +9,7 @@
     <div id="main" class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h1>Lista Vuejs - Ajax</h1>
+                <h1>Vuejs - Filtros</h1>
                 <ul class="list-group">
                     <li v-for="user in lista" class="list-group-item">
                        {{user.name}} {{user.email}}
@@ -33,7 +33,7 @@ const sUrlJson = "https://jsonplaceholder.typicode.com/users"
 
 new Vue({
     el: "#main",
-    
+
     created: function () {
         this.get_users()
     },

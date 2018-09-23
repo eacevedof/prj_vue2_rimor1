@@ -171,7 +171,10 @@ add: function(){
 ```
 
 ## 11 - [Filtros en VUE.js usando Computed Properties - AJAX](https://www.youtube.com/watch?v=eB17ef_TVrA&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=11)
--
+- Botón listar que al ser presionado traera un número determinado de usuarios usando ajax.
+- Una vez mostrado el listado, el botón desaparecerá y se mostrará una caja de texto que permitirá hacer un
+filtrado sobre la lista en patanlla.
+- 
 
 ## 12 - [Componentes en VUEjs](https://www.youtube.com/watch?v=1u7dUgSwcpI&index=12&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
 - 
