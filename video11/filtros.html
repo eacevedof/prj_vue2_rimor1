@@ -10,11 +10,13 @@
         <div class="row">
             <div class="col-sm-4">
                 <h1>Vuejs - Filtros</h1>
-                <ul class="list-group">
-                    <li v-for="user in lista" class="list-group-item">
-                       {{user.name}} {{user.email}}
-                    </li>
-                </ul>
+                <button v-if="lista.length==0" class="btn btn-primary" v-on:click="get_users">Listar</button>
+                <template v-else>
+                    <input type="text" v-model="name" v-on:keyup="get_filtered()" >
+                    <ul>
+                        <li v-for="user in lista" class="list-group-item">{{ user.name }} {{ user.email }}</li>
+                    </ul>
+                </template>
             </div>
             <div class="col-sm-8">
                 <h1>JSON</h1>
@@ -28,26 +30,32 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-//const sUrlJson = "https://randomuser.me/api/?results=50"
 const sUrlJson = "https://jsonplaceholder.typicode.com/users"
 
 new Vue({
     el: "#main",
 
     created: function () {
-        this.get_users()
+        //this.get_users()
     },
 
     data:{
-        lista:[]
+        backup:[],
+        lista:[], //lista de usuarios
+        name: "",
     },//data
     
     methods:{
         get_users : function() {
             axios.get(sUrlJson).then((response)=>{
                 this.lista = response.data
+                this.backup = response.data
             })
-        }//get_users
+        },//get_users
+
+        get_filtered: function(){
+            this.lista = this.backup.filter(user => user.name.toLowerCase().includes(this.name.toLowerCase()))
+        },//get_filtered
 
     }//methods
 
