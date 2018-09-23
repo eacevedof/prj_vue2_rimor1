@@ -215,7 +215,7 @@ computed: {
 //"eaf-list" => <eaf-list></eaf-list>
 Vue.component("eaf-list",{
     //son los atributos dentro del componente <micomp v-bind:mi_prop="some-var"/>
-    props : ["aritems"],
+    props : ["aritems"], //array de items
     template : `<ul class="list-group">
                     <li v-for="item in aritems" class="list-group-item">
                         {{ item.title }}
