@@ -171,6 +171,7 @@ add: function(){
 ```
 
 ## 11 - [Filtros en VUE.js usando Computed Properties - AJAX](https://www.youtube.com/watch?v=eB17ef_TVrA&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt&index=11)
+- [filtros.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video11/filtros.html)
 - Botón listar que al ser presionado traera un número determinado de usuarios usando ajax.
 - Una vez mostrado el listado, el botón desaparecerá y se mostrará una caja de texto que permitirá hacer un
 filtrado sobre la lista en patanlla.
@@ -187,7 +188,19 @@ computed: {
 ```
 
 ## 12 - [Componentes en VUEjs](https://www.youtube.com/watch?v=1u7dUgSwcpI&index=12&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
-- 
+- [component.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/video12/component.html)
+- Si nos fijamos en el html [component.html](https://github.com/eacevedof/prj_vue2_rimor1/blob/875da2c4699dd26daeccd626c6bb6a66063e5ee2/video12/component.html) veremos que se repite el siguiente código para **posts** y **albumes**
+```html
+    <div class="col-sm-4">
+        <h1> titulo </h1>
+        <ul class="list-group">
+            <li v-for="item in items" class="list-group-item">
+                {{ item.title }}
+            </li>
+        </ul>
+    </div>  
+```
+- Se podría optimizar usando un **componente**. Algo como: `<mi-componente></mi-componente>`
 
 
 ## 13 - [Resumen de lo aprendido](https://www.youtube.com/watch?v=KyCWibMdZjk&index=13&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)

@@ -9,7 +9,7 @@
     <div id="main" class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h1>Albumbs</h1>
+                <h1>albums</h1>
                 <ul class="list-group">
                     <li v-for="album in albums" class="list-group-item">
                         {{ album.title }}
@@ -40,12 +40,13 @@ new Vue({
     el: "#main",
 
     created: function () {
-
+        this.posts = this.get_posts()
+        this.albums = this.get_albums()
     },
 
     data:{
         posts: [],
-        albumbs: [],
+        albums: [],
     },//data
     
     methods:{
@@ -56,12 +57,12 @@ new Vue({
             })
         },//get_posts
 
-        get_albumbs : function() {
+        get_albums : function() {
             const sUrlJson = "https://jsonplaceholder.typicode.com/albums"
             axios.get(sUrlJson).then((response)=>{
                 this.lista = response.data
             })
-        },//get_albumbs        
+        },//get_albums        
     },//methods
 
     computed: {
