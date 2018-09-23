@@ -201,6 +201,37 @@ computed: {
     </div>  
 ```
 - Se podría optimizar usando un **componente**. Algo como: `<mi-componente></mi-componente>`
+```html
+<div class="col-sm-4">
+    <h1>Albums</h1>
+    <eaf-list v-bind:aritems="albums"/>
+</div>
+...
+<eaf-list v-bind:aritems="posts"/>
+...
+<eaf-list v-bind:aritems="photos"/>
+```
+```js
+//"eaf-list" => <eaf-list></eaf-list>
+Vue.component("eaf-list",{
+    //son los atributos dentro del componente <micomp v-bind:mi_prop="some-var"/>
+    props : ["aritems"],
+    template : `<ul class="list-group">
+                    <li v-for="item in aritems" class="list-group-item">
+                        {{ item.title }}
+                    </li>
+                </ul>`,
+})//eaf-list
+...
+    data:{
+        posts: [],
+        albums: [],
+        photos: [
+            {title: "foto 1"},
+            {title: "foto 2"}
+        ],
+    },//data
 
+```
 
 ## 13 - [Resumen de lo aprendido](https://www.youtube.com/watch?v=KyCWibMdZjk&index=13&list=PLhCiuvlix-rRfn75tEQHzsYaijqSpW_vt)
