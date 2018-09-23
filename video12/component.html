@@ -36,6 +36,15 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+Vue.component("common-list",{
+    props : ["list"],
+    template : `<ul class="list-group">
+                    <li v-for="item in list" class="list-group-item">
+                        {{ item.title }}
+                    </li>
+                </ul>`,
+})//common-list
+
 new Vue({
     el: "#main",
 
@@ -53,14 +62,14 @@ new Vue({
         get_posts : function() {
             const sUrlJson = "https://jsonplaceholder.typicode.com/posts"
             axios.get(sUrlJson).then((response)=>{
-                this.lista = response.data
+                this.posts = response.data
             })
         },//get_posts
 
         get_albums : function() {
             const sUrlJson = "https://jsonplaceholder.typicode.com/albums"
             axios.get(sUrlJson).then((response)=>{
-                this.lista = response.data
+                this.albums = response.data
             })
         },//get_albums        
     },//methods
