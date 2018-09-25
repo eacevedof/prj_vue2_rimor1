@@ -41,6 +41,9 @@ added 387 packages in 19.355s
 
 - **comando:** `vue init webpack webpack`
 - **comando:** `cd <nombre-carpeta>; npm run dev` lanza un servidor con el proyecto ejecutandose
-
+```
+ DONE  Compiled successfully in 3475ms                     22:31:04
+ I  Your application is running here: http://localhost:8080
+```
 - **comando:** ``
 - **comando:** ``
