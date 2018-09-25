@@ -31,8 +31,17 @@ npm WARN vuecli No license field.
 + npm@6.4.1
 added 387 packages in 19.355s
 ```
+### Tipos de instalación con `vue init`
+- `webpack`
+- `webpack-simple`
+- `browserify`
+- `browserify-simple`
+- `pwa` Tecnología orientada a web progresivas. Une lo mejor de la web y app nativas
+- `simple` Todo en un html
 
-- **comando:** ``
+- **comando:** `vue init webpack webpack`
+
+
 - **comando:** ``
 - **comando:** ``
 - **comando:** ``
