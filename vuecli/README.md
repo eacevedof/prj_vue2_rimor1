@@ -36,12 +36,11 @@ added 387 packages in 19.355s
 - `webpack-simple` <nombre-carpeta>
 - `browserify` <nombre-carpeta>
 - `browserify-simple` <nombre-carpeta>
-- `pwa` Tecnología orientada a web progresivas. Une lo mejor de la web y app nativas
-- `simple` Todo en un html <nombre-carpeta>
+- `pwa` <nombre-carpeta> Tecnología orientada a web progresivas. Une lo mejor de la web y app nativas
+- `simple` <nombre-carpeta> Todo en un html 
 
 - **comando:** `vue init webpack webpack`
+- **comando:** `cd <nombre-carpeta>; npm run dev` lanza un servidor con el proyecto ejecutandose
 
-
-- **comando:** ``
 - **comando:** ``
 - **comando:** ``
