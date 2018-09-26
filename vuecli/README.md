@@ -45,5 +45,35 @@ added 387 packages in 19.355s
  DONE  Compiled successfully in 3475ms                     22:31:04
  I  Your application is running here: http://localhost:8080
 ```
+
+### **vue init webpack <any-folder>**
+
+#### config/
+```ssh
+config/
+    build.js
+    check-versions.js
+    logo.png
+    utils.js
+    vue-loader.conf.js
+    webpack.base.conf.js
+    webpack.dev.conf.js
+    webpack.prod.conf.js
+```
+
+#### src/
+```ssh
+src/
+│   App.vue
+│   main.js
+│
+├───assets
+│       logo.png
+│
+└───components
+        HelloWorld.vue
+```
+
+
 - **comando:** ``
 - **comando:** ``
