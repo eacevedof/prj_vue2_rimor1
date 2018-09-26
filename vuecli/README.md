@@ -86,22 +86,106 @@ index.html
 				components/HelloWorld.vue
 ```
 #### `index.html`
-```
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>webpack</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected: -->
+    <script type="text/javascript" src="/app.js"></script>
+  </body>
+</html>
 ```
 #### `app.js`
-```
+```js
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	function hotDisposeChunk(chunkId) {
+/******/ 		delete installedChunks[chunkId];
+/******/ 	}
+/******/ 	var parentHotUpdateCallback = window["webpackHotUpdate"];
+/******/ 	window["webpackHotUpdate"] = 
+/******/ 	function webpackHotUpdateCallback(chunkId, moreModules) { // eslint-disable-line no-unused-vars
+...
 ```
 #### `main.js`
-```
+```js
+import Vue from 'vue'
+import App from './App'
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})
 ```
 #### `App.vue`
-```
+```html
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <HelloWorld/>
+  </div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+
+<style>
+...
+</style>
 ```
 #### `components/HelloWorld.vue`
-```
-```
+```html
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <h2>Essential Links</h2>
+    <ul>
+      <li>
+        <a
+          href="https://vuejs.org"
+          target="_blank"
+        >
+          Core Docs
+        </a>
+      </li>
+      ...
+    </ul>
+  </div>
+</template>
 
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: "Bienvenido"
+    }
+  }
+}
+</script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+...
+</style>
+```
 
 - **comando:** ``
 - **comando:** ``
