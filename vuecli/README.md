@@ -186,7 +186,8 @@ export default {
 ...
 </style>
 ```
-## 6 sublime
+## 6 [Instalar vue-router](https://youtu.be/qKLJue9qRco?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
+- 
 
 ## 7 [ROUTER-LINK - Vue Route](https://www.youtube.com/watch?v=cBYTnk6p_UA&list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc&index=7)
 
