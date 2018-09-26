@@ -46,7 +46,7 @@ added 387 packages in 19.355s
  I  Your application is running here: http://localhost:8080
 ```
 
-### **vue init webpack <any-folder>**
+### **`vue init webpack <any-folder>`**
 
 #### config/
 ```ssh
