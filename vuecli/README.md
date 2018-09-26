@@ -48,10 +48,10 @@ added 387 packages in 19.355s
 
 ### **`vue init webpack <any-folder>`**
 
-#### config/
+#### build/
 ```ssh
-config/
     build.js
+        process.env.NODE_ENV = 'production'
     check-versions.js
     logo.png
     utils.js
@@ -60,10 +60,14 @@ config/
     webpack.dev.conf.js
     webpack.prod.conf.js
 ```
-
+#### config/
+```ssh
+    dev.env.js
+    index.js
+    prod.env.js
+```
 #### src/
 ```ssh
-src/
 │   App.vue
 │   main.js
 │
