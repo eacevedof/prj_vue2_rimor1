@@ -80,10 +80,10 @@ added 387 packages in 19.355s
 #### workflow
 ```ssh
 index.html
-	app.js
-		main.js
-			App.vue
-				components/HelloWorld.vue
+  app.js
+    main.js
+      App.vue
+        components/HelloWorld.vue
 ```
 #### `index.html`
 ```html
