@@ -77,6 +77,30 @@ added 387 packages in 19.355s
 └───components
         HelloWorld.vue
 ```
+#### workflow
+```ssh
+index.html
+	app.js
+		main.js
+			App.vue
+				components/HelloWorld.vue
+```
+#### `index.html`
+```
+```
+#### `app.js`
+```
+```
+#### `main.js`
+```
+```
+#### `App.vue`
+```
+```
+#### `components/HelloWorld.vue`
+```
+```
+
 
 
 - **comando:** ``
