@@ -186,6 +186,9 @@ export default {
 ...
 </style>
 ```
+## 6 sublime
+
+## 7 [ROUTER-LINK - Vue Route](https://www.youtube.com/watch?v=cBYTnk6p_UA&list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc&index=7)
 
 - **comando:** ``
 - **comando:** ``
