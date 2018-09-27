@@ -186,6 +186,7 @@ export default {
 ...
 </style>
 ```
+
 ## 6 [Instalar vue-router](https://youtu.be/qKLJue9qRco?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
 - 
 
