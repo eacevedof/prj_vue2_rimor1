@@ -1,13 +1,20 @@
 <template>
-  <div id="app">
-    <ul>
-      <router-link tag="li" exact-active-class="exact" active-class="active" to="/" exact>
-        <a>Home</a>
-      </router-link>
-      <router-link tag="li" exact-active-class="exact" active-class="active" to="/acerca-de">
-        <a>About</a>
-      </router-link>      
-    </ul>
+  <div id="app" class="container">
+    <nav class="nav">
+      <ul class="nvbar-nav">
+  
+          <router-link tag="li" exact-active-class="exact" active-class="active" to="/" exact class="nav-item">
+            <a class="nav-link">Home</a>
+          </router-link>
+
+          <router-link tag="li" exact-active-class="exact" active-class="active" to="/acerca-de" exact class="nav-item">
+            <a class="nav-link">About</a>
+          </router-link>     
+
+      </ul>
+    </nav>
+
+    <!-- aqui se cargan los componentes configurados en index.js-->
     <router-view/>
   </div>
 </template>
