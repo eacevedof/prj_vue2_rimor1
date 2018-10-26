@@ -1,5 +1,7 @@
 # link
 
+- [link router](https://youtu.be/cBYTnk6p_UA?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
+
 > A Vue.js project
 
 ## Build Setup

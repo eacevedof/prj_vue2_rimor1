@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <ul>
+      <router-link tag="li" to="/">
+        <a>Home</a>
+      </router-link>
+      <router-link tag="li" to="/acerca-de">
+        <a>About</a>
+      </router-link>      
+    </ul>
     <router-view/>
   </div>
 </template>
