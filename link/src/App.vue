@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <ul>
-      <router-link tag="li" to="/">
+      <router-link tag="li" exact-active-class="exact" active-class="active" to="/" exact>
         <a>Home</a>
       </router-link>
-      <router-link tag="li" to="/acerca-de">
+      <router-link tag="li" exact-active-class="exact" active-class="active" to="/acerca-de">
         <a>About</a>
       </router-link>      
     </ul>
@@ -19,12 +19,10 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.exact {
+  background: #00ff00
+}
+.active {
+  background: #00ff00
 }
 </style>
