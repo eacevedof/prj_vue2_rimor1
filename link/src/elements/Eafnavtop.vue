@@ -1,25 +1,6 @@
 <template>
     <!--Eafnavtop-->
-<!--     <nav class="nav">
-        <ul class="nav">
-            <router-link tag="li" exact-active-class="exact" active-class="active" to="/" exact class="nav-item">
-                <a class="nav-link">Home</a>
-            </router-link>
-
-            <router-link tag="li" exact-active-class="exact" active-class="active" to="/posts" exact class="nav-item">
-                <a class="nav-link">Posts</a>
-            </router-link> 
-
-            <router-link tag="li" exact-active-class="exact" active-class="active" to="/albums" exact class="nav-item">
-                <a class="nav-link">Albums</a>
-            </router-link> 
-
-            <router-link tag="li" exact-active-class="exact" active-class="active" to="/photos" exact class="nav-item">
-                <a class="nav-link">Photos</a>
-            </router-link>
-        </ul>
-    </nav> -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand company" href="#">The Company</a>
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,7 +10,6 @@
                 </li>  
             </ul>
         </div>
-
     </nav> 
     <!--/Eafnavtop-->
 </template>
