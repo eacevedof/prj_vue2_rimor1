@@ -1,6 +1,6 @@
 <template>
     <!--Eafnavtop-->
-    <nav class="nav">
+<!--     <nav class="nav">
         <ul class="nav">
             <router-link tag="li" exact-active-class="exact" active-class="active" to="/" exact class="nav-item">
                 <a class="nav-link">Home</a>
@@ -18,19 +18,43 @@
                 <a class="nav-link">Photos</a>
             </router-link>
         </ul>
-    </nav>
+    </nav> -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">The Company</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li v-for="item in routes" v-bind:key="item.id" class="nav-item">
+                    <router-link v-bind:to="item.path" class="nav-link"> {{ item.text }} </router-link>
+                </li>  
+            </ul>
+        </div>
+    </nav> 
     <!--/Eafnavtop-->
 </template>
 
 <script>
 module.exports = {
     name: "Eafnavtop",
-    props: ["aritems"],
-    data: function () {
-        return { }
-    }
+    data() {
+        console.log("Eafnavtop.data()")
+        return { 
+            routes: [
+                {id:1, path:'/', text:'Home'},
+                {id:2, path:'/posts', text:'Posts'},
+                {id:3, path:'/albums', text:'Albums'},
+                {id:4, path:'/photos', text:'Photos'},
+            ]
+        }
+    }//data()
 }
 </script>
 
 <style>
+.router-link-exact-active{
+    color:darkblue!important;
+    font-weight: bold; 
+} 
+.router-link-active{
+    /* color:darkblue!important; */
+}
 </style>

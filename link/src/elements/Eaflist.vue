@@ -1,11 +1,11 @@
 <template>
-  <!--Eaflist-->
-  <ul class="list-group">
-    <li v-for="item in aritems" v-bind:key="item.id" class="list-group-item">
-        {{item.id + '.- ' + item.title }}
-    </li>
-  </ul>
-  <!--/Eaflist-->
+    <!--Eaflist-->
+    <ul class="list-group">
+        <li v-for="item in aritems" v-bind:key="item.id" class="list-group-item">
+            {{item.id + '.- ' + item.title }}
+        </li>
+    </ul>
+    <!--/Eaflist-->
 </template>
 
 <script>
