@@ -5,15 +5,15 @@
       <div class="row">
         <div class="col-sm-4">
             <h4>Albums</h4>
-            <EafList  v-bind:aritems="albums"/>
+            <eaflist v-bind:aritems="albums"/>
         </div>
         <div class="col-sm-4">          
             <h4>Posts</h4>
-            
+            <eaflist v-bind:aritems="posts"/>
         </div>      
         <div class="col-sm-4">
             <h4>Photos</h4>
-            
+            <eaflist v-bind:aritems="photos"/>
         </div>
         <hr/>            
         <div class="col-sm-12">
@@ -29,19 +29,18 @@
 
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
-import EafList from '@/components/EafList'
+import eaflist from '@/components/Eaflist'
 import axios from 'axios'
-//import VueAxios from 'vue-axios'
-//Vue.use(VueAxios, axios)
 
 export default {
   name: 'Home',
     components : {
-      EafList
+      eaflist
     },
     created: function () {
         this.posts = this.get_posts()
         this.albums = this.get_albums()
+        this.photos = this.get_photos()
     },
 
     data(){
@@ -49,16 +48,13 @@ export default {
         msg: "Bienvenido",
         posts: [],
         albums: [],
-        photos: [
-            {title: "foto 1"},
-            {title: "foto 2"}
-        ]
+        photos: []
       }
     },//data
     
     methods:{
         get_posts : function() {
-            const sUrlJson = "https://jsonplaceholder.typicode.com/posts/3"
+            const sUrlJson = "https://jsonplaceholder.typicode.com/posts/"
             axios.get(sUrlJson).then((response)=>{
                 this.posts = response.data
             })
@@ -69,7 +65,14 @@ export default {
             axios.get(sUrlJson).then((response)=>{
                 this.albums = response.data
             })
-        },//get_albums        
+        },//get_albums
+        
+        get_photos : function(){
+           const sUrlJson = "https://jsonplaceholder.typicode.com/albums/1/photos"
+           axios.get(sUrlJson).then((response)=>{
+                this.photos = response.data
+            })
+        }
     },//methods
 
     computed: {

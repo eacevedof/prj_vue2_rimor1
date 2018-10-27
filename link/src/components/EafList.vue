@@ -1,16 +1,16 @@
 <template>
-  <!--EafList-->
+  <!--Eaflist-->
   <ul class="list-group">
     <li v-for="item in aritems" v-bind:key="item.id" class="list-group-item">
         {{ item.title }}
     </li>
   </ul>
-  <!--/EafList-->
+  <!--/Eaflist-->
 </template>
 
 <script>
 module.exports = {
-  name: "EafList",
+  name: "Eaflist",
   props: ["aritems"],
   data: function () {
     return { }
