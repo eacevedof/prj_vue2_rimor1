@@ -2,7 +2,7 @@
   <!--Eaflist-->
   <ul class="list-group">
     <li v-for="item in aritems" v-bind:key="item.id" class="list-group-item">
-        {{ item.title }}
+        {{item.id + '.- ' + item.title }}
     </li>
   </ul>
   <!--/Eaflist-->
@@ -10,11 +10,11 @@
 
 <script>
 module.exports = {
-  name: "Eaflist",
-  props: ["aritems"],
-  data: function () {
-    return { }
-  }
+    name: "Eaflist",
+    props: ["aritems"],
+    data: function () {
+        return { }
+    }
 }
 </script>
 

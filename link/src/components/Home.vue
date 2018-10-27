@@ -34,47 +34,49 @@ import eaflistimg from '@/components/Eaflistimg'
 import axios from 'axios'
 
 export default {
-  name: 'Home',
+    name: 'Home',
+
     components : {
-      eaflist,eaflistimg
+        eaflist,eaflistimg
     },
+
     created: function () {
         this.posts = this.get_posts()
         this.albums = this.get_albums()
         this.photos = this.get_photos()
-    },
+    },//created()
 
     data(){
-      return {
-        title: "- Home.vue -",
-        posts: [],
-        albums: [],
-        photos: []
-      }
-    },//data
+        return {
+            title: "- Home.vue -",
+            posts: [],
+            albums: [],
+            photos: []
+        }
+    },//data()
     
     methods:{
         get_posts : function() {
-            const sUrlJson = "https://jsonplaceholder.typicode.com/posts/"
+            const sUrlJson = "https://jsonplaceholder.typicode.com/posts/?_limit=20"
             axios.get(sUrlJson).then((response)=>{
                 this.posts = response.data
             })
-        },//get_posts
+        },//get_posts()
 
         get_albums : function() {
-            const sUrlJson = "https://jsonplaceholder.typicode.com/albums/"
+            const sUrlJson = "https://jsonplaceholder.typicode.com/albums/?_limit=20"
             axios.get(sUrlJson).then((response)=>{
                 this.albums = response.data
             })
-        },//get_albums
+        },//get_albums()
         
         get_photos : function(){
-           const sUrlJson = "https://jsonplaceholder.typicode.com/albums/1/photos"
+           const sUrlJson = "https://jsonplaceholder.typicode.com/albums/1/photos/?_limit=20"
            axios.get(sUrlJson).then((response)=>{
                 this.photos = response.data
             })
-        }//get_photos
-        
+        }//get_photos()
+
     },//methods
 
     computed: {
