@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '@/components/pages/Home'
-import Posts from '@/components/pages/Posts'
-import Albums from '@/components/pages/Albums'
-import Photos from '@/components/pages/Photos'
+import Home from '@/views/Home'
+import Posts from '@/views/Posts'
+import Albums from '@/views/Albums'
+import Photos from '@/views/Photos'
 
 Vue.use(VueRouter)
 
