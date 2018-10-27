@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/components/Home'
-import About from '@/components/About'
+import Posts from '@/components/Posts'
+import Albums from '@/components/Albums'
+import Photos from '@/components/Photos'
 
 Vue.use(Router)
 
@@ -15,9 +17,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/acerca-de',
-      name: 'About',
-      component: About
+      path: '/posts',
+      name: 'Posts',
+      component: Posts
+    },
+    {
+      path: '/albums',
+      name: 'Albums',
+      component: Albums
+    },
+    {
+      path: '/photos',
+      name: 'Photos',
+      component: Photos
     }
   ]
 })

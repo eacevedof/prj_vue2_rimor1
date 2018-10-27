@@ -13,7 +13,7 @@
         </div>      
         <div class="col-sm-4">
             <h4>Photos</h4>
-            <eaflist v-bind:aritems="photos"/>
+            <eaflistimg v-bind:aritems="photos"/>
         </div>
         <hr/>            
         <div class="col-sm-12">
@@ -30,12 +30,13 @@
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
 import eaflist from '@/components/Eaflist'
+import eaflistimg from '@/components/Eaflistimg'
 import axios from 'axios'
 
 export default {
   name: 'Home',
     components : {
-      eaflist
+      eaflist,eaflistimg
     },
     created: function () {
         this.posts = this.get_posts()
