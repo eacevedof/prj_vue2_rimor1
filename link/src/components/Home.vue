@@ -33,7 +33,7 @@ import eaflist from '@/components/Eaflist'
 import eaflistimg from '@/components/Eaflistimg'
 import axios from 'axios'
 
-import modPosts from '@/models/Photos'
+import modPosts from '@/models/Posts'
 
 export default {
     name: 'Home',
@@ -44,7 +44,7 @@ export default {
 
     created: function () {
         this.posts = this.get_posts()
-        //this.posts = modPosts.get_data()
+        //this.posts = modPosts.get_data().data().result
         this.albums = this.get_albums()
         this.photos = this.get_photos()
     },//created()

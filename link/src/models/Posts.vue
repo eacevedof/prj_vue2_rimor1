@@ -12,7 +12,8 @@ export default {
         get_data : function() {
             const sUrlJson = this.urldata
             oAxios.get(sUrlJson).then((response)=>{
-                this.result = response.data
+                //this.result = response.data
+                return response.data
             })
         },//get_data()
 
