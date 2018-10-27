@@ -33,9 +33,9 @@ import eaflist from '@/components/Eaflist'
 import eaflistimg from '@/components/Eaflistimg'
 import axios from 'axios'
 
-import ModelPost from '@/models/ModelPost'
-import ModelAlbum from '@/models/ModelAlbum'
-import ModelPhoto from '@/models/ModelPhoto'
+import ModelPost from '@/models/ModelPost.js'
+import ModelAlbum from '@/models/ModelAlbum.js'
+import ModelPhoto from '@/models/ModelPhoto.js'
 
 export default {
     name: 'Home',

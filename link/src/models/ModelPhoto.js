@@ -1,4 +1,3 @@
-<script>
 //ModelPhoto
 import axios from 'axios'
 
@@ -9,4 +8,3 @@ export default {
         axios.get(sUrlJson).then(fnLoad)
     },//get_data()
 }//ModelPhoto
-</script>
