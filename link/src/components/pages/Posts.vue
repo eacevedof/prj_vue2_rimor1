@@ -22,7 +22,7 @@ export default {
     },
 
     data(){
-        console.log("data()")
+        console.log("Posts.data()")
         return {
             title: "Posts",
             posts: []
@@ -30,12 +30,13 @@ export default {
     },//data()
     
     created: function () {
-        console.log("create()")
+        console.log("Posts.create()")
         this.get_posts()
     },//created()
 
     methods:{
-        get_posts : function() {         
+        get_posts : function() {
+            console.log("Posts.methods.get_posts()")   
             ModelPost.get_data((response)=>{
                 this.posts = response.data
             })
