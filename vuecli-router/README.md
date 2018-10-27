@@ -1,4 +1,7 @@
-# link
+# vuecli-router
+
+> La aplicación usa **VueRouter**, **Axios** y **jsonplaceholder.typicode.com**
+> La he refactorizado varias veces y creado **modelos**, **vistas** y **elementos**
 
 - [Tutorial Vue2](https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vue2)
 - [Youtube Rimorsoft - link router](https://youtu.be/cBYTnk6p_UA?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
@@ -17,24 +20,6 @@ For recursive components, make sure to provide the "name" option.
     Eaflist
 },
 ```
-<hr/>
-```js
-
-```
-
-- **solución:**
-```js
-```
-
-
-
-
-
-
-<br/>
-<hr/>
-<hr/>
-> A Vue.js project
 
 ## Build Setup
 
@@ -52,4 +37,3 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
