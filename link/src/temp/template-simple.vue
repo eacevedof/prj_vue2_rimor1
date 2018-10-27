@@ -21,6 +21,7 @@ export default {
         console.log("template-simple.data()")
         return {
             title: "template-simple",
+            rows: []
         }
     },//data()
     
