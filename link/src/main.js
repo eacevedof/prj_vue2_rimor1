@@ -3,7 +3,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import oRouter from './mixins/router'
+import router from './mixins/router'
 import 'bootstrap'
 import Pagetitle from '@/mixins/pagetitle'
 
@@ -15,7 +15,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
-    oRouter,
+    router,
     components: { App },
     template: '<App/>'
 })

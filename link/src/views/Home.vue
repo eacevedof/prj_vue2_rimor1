@@ -42,15 +42,10 @@ import eaflistimg from '@/elements/Eaflistimg'
 export default {
     name: 'Home',
 
-
     components : {
         eaflist,eaflistimg
     },
-
-    title () {
-        return `Foo Page — ${this.name}`
-    },
-
+ 
     created: function () {
         console.log("create()")
         this.posts = this.get_posts()

@@ -1,27 +1,29 @@
 //pagetitle.js
 function getTitle (vm) {
-    const { title } = vm.$options
-    if (title) {
-        return typeof title === 'function'
-        ? title.call(vm)
-        : title
+    console.log("pagetitle.getTitle()")
+    console.log("vm.$options",vm.$options)
+    const { pagetitle } = vm.$options
+    if (pagetitle) {
+        return typeof pagetitle === 'function'
+        ? pagetitle.call(vm)
+        : pagetitle
     }
 }
 
 const serverTitleMixin = {
     created () {
-        const title = getTitle(this)
-        if (title) {
-            this.$ssrContext.title = `Vue HN 2.0 | ${title}`
+        const pagetitle = getTitle(this)
+        if (pagetitle) {
+            this.$ssrContext.pagetitle = `Vue HN 2.0 | ${pagetitle}`
         }
     }
 }
 
 const clientTitleMixin = {
     mounted () {
-        const title = getTitle(this)
-        if (title) {
-            document.title = `Vue HN 2.0 | ${title}`
+        const pagetitle = getTitle(this)
+        if (pagetitle) {
+            document.title = `Vue HN 2.0 | ${pagetitle}`
         }
     }
 }
