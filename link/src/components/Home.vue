@@ -1,7 +1,7 @@
 <template>
   <!--home.vue-->
   <div>
-    <h3>{{msg}}</h3>
+    <h3>{{title}}</h3>
       <div class="row">
         <div class="col-sm-4">
             <h4>Albums</h4>
@@ -46,7 +46,7 @@ export default {
 
     data(){
       return {
-        msg: "Bienvenido",
+        title: "- Home.vue -",
         posts: [],
         albums: [],
         photos: []
@@ -73,7 +73,8 @@ export default {
            axios.get(sUrlJson).then((response)=>{
                 this.photos = response.data
             })
-        }
+        }//get_photos
+        
     },//methods
 
     computed: {
