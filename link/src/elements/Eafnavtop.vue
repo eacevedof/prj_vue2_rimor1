@@ -20,7 +20,8 @@
         </ul>
     </nav> -->
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">The Company</a>
+        <a class="navbar-brand company" href="#">The Company</a>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li v-for="item in routes" v-bind:key="item.id" class="nav-item">
@@ -28,6 +29,7 @@
                 </li>  
             </ul>
         </div>
+        
     </nav> 
     <!--/Eafnavtop-->
 </template>
@@ -50,9 +52,13 @@ module.exports = {
 </script>
 
 <style>
+.company{
+    color:#004ecb!important;
+    font-weight: bold;
+}
 .router-link-exact-active{
-    color:darkblue!important;
-    font-weight: bold; 
+    color:#2979ff!important;
+    /* font-weight: bold;  */
 } 
 .router-link-active{
     /* color:darkblue!important; */
