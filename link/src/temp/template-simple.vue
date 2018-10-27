@@ -14,17 +14,18 @@ export default {
     name: 'template-simple',
 
     components : {
+        
     },
 
     data(){
-        console.log("data()")
+        console.log("template-simple.data()")
         return {
-            title: "- template-simple.vue -",
+            title: "template-simple",
         }
     },//data()
     
     created: function () {
-        console.log("create()")
+        console.log("template-simple.create()")
     },//created()
 
     methods:{
