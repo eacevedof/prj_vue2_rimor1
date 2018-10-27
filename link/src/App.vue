@@ -1,8 +1,10 @@
 <template>
 	<!--App.vue-->
 	<div id="app" class="container">
+
+		<!--router-link-->
 		<eafnavtop/>
-		<!-- aqui se cargan los componentes configurados en index.js-->
+
 		<router-view/>
 	</div>
 	<!--App.vue-->
