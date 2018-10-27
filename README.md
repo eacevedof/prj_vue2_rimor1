@@ -11,7 +11,7 @@
 > Ejemplos básicos Vue2 en formato simple. Se tratan directivas y calculos
 - [README.md](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/README.md)
 
-## [vuecli](https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vuecli){target=_blank}
+## [vuecli](https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vuecli)
 > Ejemplos de estructura de carpetas ejecutando los ditintos comandos que admite `vuecli`
 - [README.md](https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vuecli/README.md)
 
