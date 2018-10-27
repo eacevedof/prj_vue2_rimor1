@@ -16,6 +16,7 @@ import eaflistimg from '@/elements/Eaflistimg'
 
 export default {
     name: 'Photos',
+    pagetitle: 'Photos',
 
     components : {
         eaflistimg

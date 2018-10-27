@@ -41,6 +41,7 @@ import eaflistimg from '@/elements/Eaflistimg'
 
 export default {
     name: 'Home',
+    pagetitle: 'Home',
 
     components : {
         eaflist,eaflistimg

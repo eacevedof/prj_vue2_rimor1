@@ -1,4 +1,4 @@
-//pagetitle.js
+//src/mixins/pagetitle.js
 function getTitle (vm) {
     console.log("pagetitle.getTitle()")
     console.log("vm.$options",vm.$options)
@@ -8,7 +8,7 @@ function getTitle (vm) {
         ? pagetitle.call(vm)
         : pagetitle
     }
-}
+}//getTitle()
 
 const serverTitleMixin = {
     created () {
@@ -17,16 +17,16 @@ const serverTitleMixin = {
             this.$ssrContext.pagetitle = `Vue HN 2.0 | ${pagetitle}`
         }
     }
-}
+}//serverTitleMixin
 
 const clientTitleMixin = {
     mounted () {
         const pagetitle = getTitle(this)
         if (pagetitle) {
-            document.title = `Vue HN 2.0 | ${pagetitle}`
+            document.title = `Eduardo A.F. | ${pagetitle}`
         }
     }
-}
+}//clientTitleMixin
 
 export default process.env.VUE_ENV === 'server'
 ? serverTitleMixin

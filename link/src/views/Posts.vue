@@ -16,7 +16,7 @@ import eaflist from '@/elements/Eaflist'
 
 export default {
     name: 'Posts',
-
+    pagetitle: 'Posts',
     components : {
         eaflist
     },
