@@ -29,13 +29,12 @@
 
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
-import eaflist from '@/components/Eaflist'
-import eaflistimg from '@/components/Eaflistimg'
-import axios from 'axios'
-
 import ModelPost from '@/models/ModelPost.js'
 import ModelAlbum from '@/models/ModelAlbum.js'
 import ModelPhoto from '@/models/ModelPhoto.js'
+
+import eaflist from '@/elements/Eaflist'
+import eaflistimg from '@/elements/Eaflistimg'
 
 export default {
     name: 'Home',
