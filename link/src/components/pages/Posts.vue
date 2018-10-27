@@ -1,7 +1,7 @@
 <template>
     <!--Posts.vue-->
     <div>
-        <h1>Posts</h1>
+        <h1>{{title}}</h1>
         <p> 
         - Posts.vue -
         </p>
@@ -24,16 +24,16 @@ export default {
     data(){
         console.log("data()")
         return {
-            title: "- Posts.vue -",
+            title: "Posts",
             posts: []
         }
     },//data()
     
     created: function () {
         console.log("create()")
-        this.posts = this.get_posts()
+        this.get_posts()
     },//created()
-        
+
     methods:{
         get_posts : function() {         
             ModelPost.get_data((response)=>{
