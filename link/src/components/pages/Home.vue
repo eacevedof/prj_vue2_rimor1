@@ -1,30 +1,33 @@
 <template>
-  <!--home.vue-->
-  <div>
-    <h3>{{title}}</h3>
-      <div class="row">
-        <div class="col-sm-4">          
-            <h4>Posts</h4>
-            <eaflist v-bind:aritems="posts"/>
-        </div>    
-        <div class="col-sm-4">
-            <h4>Albums</h4>
-            <eaflist v-bind:aritems="albums"/>
-        </div>          
-        <div class="col-sm-4">
-            <h4>Photos</h4>
-            <eaflistimg v-bind:aritems="photos"/>
+    <!--home.vue-->
+    <div>
+        <h1>Home</h1>
+        <p> 
+        - Home.vue -
+        </p>
+        <div class="row">
+            <div class="col-sm-4">          
+                <h4>Posts</h4>
+                <eaflist v-bind:aritems="posts"/>
+            </div>    
+            <div class="col-sm-4">
+                <h4>Albums</h4>
+                <eaflist v-bind:aritems="albums"/>
+            </div>          
+            <div class="col-sm-4">
+                <h4>Photos</h4>
+                <eaflistimg v-bind:aritems="photos"/>
+            </div>
+            <hr/>            
+            <div class="col-sm-12">
+                <h4>JSON</h4>
+                <pre style="background:#e0e0e0; border:1px solid #ccc">
+                    {{ $data }}
+                </pre>
+            </div>
         </div>
-        <hr/>            
-        <div class="col-sm-12">
-            <h4>JSON</h4>
-            <pre style="background:#e0e0e0; border:1px solid #ccc">
-                {{ $data }}
-            </pre>
-        </div>
-      </div>
-  </div>
-  <!--/home.vue-->
+    </div>
+    <!--/home.vue-->
 </template>
 
 <script>
