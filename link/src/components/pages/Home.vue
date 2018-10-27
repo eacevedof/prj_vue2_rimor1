@@ -42,8 +42,13 @@ import eaflistimg from '@/elements/Eaflistimg'
 export default {
     name: 'Home',
 
+
     components : {
         eaflist,eaflistimg
+    },
+
+    title () {
+        return `Foo Page — ${this.name}`
     },
 
     created: function () {
