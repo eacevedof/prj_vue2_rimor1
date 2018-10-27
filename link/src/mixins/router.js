@@ -1,3 +1,4 @@
+//src/mixins/router.js
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 

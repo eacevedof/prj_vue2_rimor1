@@ -43,7 +43,4 @@ https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=2979F
     color:#2979ff!important;
     /* font-weight: bold;  */
 } 
-.router-link-active{
-    /* color:darkblue!important; */
-}
 </style>
