@@ -3,14 +3,14 @@
   <div>
     <h3>{{title}}</h3>
       <div class="row">
-        <div class="col-sm-4">
-            <h4>Albums</h4>
-            <eaflist v-bind:aritems="albums"/>
-        </div>
         <div class="col-sm-4">          
             <h4>Posts</h4>
             <eaflist v-bind:aritems="posts"/>
-        </div>      
+        </div>    
+        <div class="col-sm-4">
+            <h4>Albums</h4>
+            <eaflist v-bind:aritems="albums"/>
+        </div>          
         <div class="col-sm-4">
             <h4>Photos</h4>
             <eaflistimg v-bind:aritems="photos"/>
@@ -33,6 +33,8 @@ import eaflist from '@/components/Eaflist'
 import eaflistimg from '@/components/Eaflistimg'
 import axios from 'axios'
 
+import modPosts from '@/models/Photos'
+
 export default {
     name: 'Home',
 
@@ -42,6 +44,7 @@ export default {
 
     created: function () {
         this.posts = this.get_posts()
+        //this.posts = modPosts.get_data()
         this.albums = this.get_albums()
         this.photos = this.get_photos()
     },//created()
