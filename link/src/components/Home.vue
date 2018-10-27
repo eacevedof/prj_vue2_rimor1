@@ -44,7 +44,7 @@ export default {
 
     created: function () {
         this.posts = this.get_posts()
-        this.posts = modPosts.methods.get_data()
+        this.posts = modPosts.get_data()
         this.albums = this.get_albums()
         this.photos = this.get_photos()
     },//created()
