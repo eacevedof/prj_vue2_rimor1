@@ -16,10 +16,6 @@ export default {
     components : {
     },
 
-    created: function () {
-        console.log("create()")
-    },//created()
-
     data(){
         console.log("data()")
         return {
@@ -27,6 +23,10 @@ export default {
         }
     },//data()
     
+    created: function () {
+        console.log("create()")
+    },//created()
+
     methods:{
 
     },//methods
