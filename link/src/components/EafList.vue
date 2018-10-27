@@ -4,16 +4,14 @@
 
 <script>
 module.exports = {
-
-  name: "eaf-list",
+  name: "EafList",
   data: function () {
     return {
-      greeting: 'eaf-list'
+      greeting: 'EafList'
     }
   }
 }
 </script>
 
 <style>
-
 </style>

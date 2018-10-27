@@ -5,8 +5,7 @@
       <div class="row">
         <div class="col-sm-4">
             <h4>Albums</h4>
-            <Eaflist/>
-
+            <EafList/>
         </div>
         <div class="col-sm-4">          
             <h4>Posts</h4>
@@ -30,7 +29,7 @@
 
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
-import Eaflist from '@/components/Eaflist'
+import EafList from '@/components/EafList'
 import axios from 'axios'
 //import VueAxios from 'vue-axios'
 //Vue.use(VueAxios, axios)
@@ -38,7 +37,7 @@ import axios from 'axios'
 export default {
   name: 'Home',
     components : {
-      Eaflist
+      EafList
     },
     created: function () {
         this.posts = this.get_posts()
