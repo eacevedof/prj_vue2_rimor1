@@ -38,3 +38,6 @@ export default {
     }//computed
 }//template-simple.
 </script>
+
+<style>
+</style>
