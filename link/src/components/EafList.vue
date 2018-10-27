@@ -1,7 +1,7 @@
 <template>
   <!--EafList-->
   <ul class="list-group">
-    <li v-for="item in aritems" class="list-group-item">
+    <li v-for="item in aritems" v-bind:key="item.id" class="list-group-item">
         {{ item.title }}
     </li>
   </ul>
