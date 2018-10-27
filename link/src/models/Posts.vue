@@ -1,4 +1,5 @@
 <script>
+//ModelPost
 import oAxios from 'axios'
 
 export default {
@@ -10,5 +11,5 @@ export default {
             return response.data
         })
     },//get_data()
-}
+}//Posts
 </script>
