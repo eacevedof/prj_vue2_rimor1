@@ -7,7 +7,7 @@
 - [Tutorial Vue2](https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vue2)
 - [Youtube Rimorsoft - link router](https://youtu.be/cBYTnk6p_UA?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
 - [Quitar hash # de la url - vue router](https://stackoverflow.com/questions/34623833/how-to-remove-hashbang-from-url)
-- <img src="https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5bd4dbcb4cfc473b24e2a879/37c67a151cf43eb2f4027883b2d23589/image.png" width="400" height="500"/>
+- <img src="https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5bd4dbcb4cfc473b24e2a879/37c67a151cf43eb2f4027883b2d23589/image.png" width="600" height="500"/>
 
 ## Errores
 
