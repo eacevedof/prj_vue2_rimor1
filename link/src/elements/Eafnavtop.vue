@@ -1,7 +1,7 @@
 <template>
     <!--Eafnavtop-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand company" href="#">The Company</a>
+        <a class="navbar-brand company" href="#">&nbsp;&nbsp;The Company&nbsp;&nbsp;</a>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -37,7 +37,7 @@ https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=2979F
 */
 .company{
     color:#004ecb!important;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .router-link-exact-active{
     color:#2979ff!important;
