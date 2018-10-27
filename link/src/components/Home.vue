@@ -43,7 +43,7 @@ export default {
     },
 
     created: function () {
-        this.posts = ModelPost.get_data()
+        ModelPost.get_data(this)
         //this.posts = this.get_posts()
         this.albums = this.get_albums()
         this.photos = this.get_photos()
