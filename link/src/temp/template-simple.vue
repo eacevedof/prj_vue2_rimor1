@@ -1,7 +1,7 @@
 <template>
     <!--template-simple.vue-->
     <div>
-        <h1>template-simple</h1>
+        <h1>{{title}}</h1>
         <p> 
         - template-simple.vue -
         </p>
