@@ -5,7 +5,7 @@
         <p> 
         - Photos.vue -
         </p>
-        <eaflistimg v-bind:aritems="photos"/>
+        <eaflistimg v-bind:aritems="rows"/>
     </div>
     <!--/Photos.vue-->
 </template>
@@ -25,7 +25,7 @@ export default {
         console.log("Photos.data()")
         return {
             title: "Photos",
-            photos: []
+            rows: []
         }
     },//data()
     
@@ -38,7 +38,7 @@ export default {
         get_photos : function() {
             console.log("Photos.methods.get_photos()")   
             ModelPhoto.get_data((response)=>{
-                this.photos = response.data
+                this.rows = response.data
             })
         },//get_photos()
     },//methods

@@ -5,7 +5,7 @@
         <p> 
         - Albums.vue -
         </p>
-        <eaflist v-bind:aritems="albums"/>
+        <eaflist v-bind:aritems="rows"/>
     </div>
     <!--/Albums.vue-->
 </template>
@@ -25,7 +25,7 @@ export default {
         console.log("Albums.data()")
         return {
             title: "Albums",
-            albums: []
+            rows: []
         }
     },//data()
     
@@ -38,7 +38,7 @@ export default {
         get_Albums : function() {
             console.log("Albums.methods.get_Albums()")   
             ModelAlbum.get_data((response)=>{
-                this.albums = response.data
+                this.rows = response.data
             })
         },//get_Albums()
     },//methods

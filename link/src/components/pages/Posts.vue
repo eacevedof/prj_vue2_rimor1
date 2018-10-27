@@ -5,7 +5,7 @@
         <p> 
         - Posts.vue -
         </p>
-        <eaflist v-bind:aritems="posts"/>
+        <eaflist v-bind:aritems="rows"/>
     </div>
     <!--/Posts.vue-->
 </template>
@@ -25,7 +25,7 @@ export default {
         console.log("Posts.data()")
         return {
             title: "Posts",
-            posts: []
+            rows: []
         }
     },//data()
     
@@ -38,7 +38,7 @@ export default {
         get_posts : function() {
             console.log("Posts.methods.get_posts()")   
             ModelPost.get_data((response)=>{
-                this.posts = response.data
+                this.rows = response.data
             })
         },//get_posts()
     },//methods
