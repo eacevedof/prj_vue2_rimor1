@@ -43,13 +43,14 @@ export default {
     },
 
     created: function () {
-        ModelPost.get_data(this)
-        //this.posts = this.get_posts()
+        console.log("create()")
+        this.posts = this.get_posts()
         this.albums = this.get_albums()
         this.photos = this.get_photos()
     },//created()
 
     data(){
+        console.log("data()")
         return {
             title: "- Home.vue -",
             posts: [],
@@ -60,8 +61,11 @@ export default {
     
     methods:{
         get_posts : function() {
-            const sUrlJson = "https://jsonplaceholder.typicode.com/posts/?_limit=20"
-            axios.get(sUrlJson).then((response)=>{
+            //const sUrlJson = "https://jsonplaceholder.typicode.com/posts/?_limit=20"
+            //axios.get(sUrlJson).then((response)=>{
+            //    this.posts = response.data
+            //})            
+            ModelPost.get_data((response)=>{
                 this.posts = response.data
             })
         },//get_posts()
