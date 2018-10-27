@@ -5,10 +5,16 @@
 ## Errores
 
 ```
-vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <EafList> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <EafList> - did you register the component correctly? 
+For recursive components, make sure to provide the "name" option.
 ```
-    - Solución:
-    No hay
+- Solución:
+- Faltaba incluir el atributo **components**:
+```js
+    components : {
+    Eaflist
+},
+```
 
 > A Vue.js project
 

@@ -1,13 +1,19 @@
 <template>
-    <!--eaf-list-->
-    <ul class="list-group">
-      
-    </ul>
+  <p>{{ greeting }}</p>
 </template>
 
 <script>
-export default {
-    name: 'EafList',
+module.exports = {
+
+  name: "eaf-list",
+  data: function () {
+    return {
+      greeting: 'eaf-list'
+    }
+  }
 }
 </script>
 
+<style>
+
+</style>

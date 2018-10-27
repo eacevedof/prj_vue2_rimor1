@@ -5,15 +5,16 @@
       <div class="row">
         <div class="col-sm-4">
             <h4>Albums</h4>
-            <EafList v-bind:aritems="albums"/>
+            <Eaflist/>
+
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4">          
             <h4>Posts</h4>
-            <EafList v-bind:aritems="posts"/>
+            
         </div>      
         <div class="col-sm-4">
             <h4>Photos</h4>
-            <EafList v-bind:aritems="photos"/>
+            
         </div>
         <hr/>            
         <div class="col-sm-12">
@@ -29,14 +30,16 @@
 
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
+import Eaflist from '@/components/Eaflist'
 import axios from 'axios'
 //import VueAxios from 'vue-axios'
-import EafList from '@/components/EafList'
 //Vue.use(VueAxios, axios)
 
 export default {
   name: 'Home',
-
+    components : {
+      Eaflist
+    },
     created: function () {
         this.posts = this.get_posts()
         this.albums = this.get_albums()

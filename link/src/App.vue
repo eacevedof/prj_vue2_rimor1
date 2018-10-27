@@ -26,10 +26,4 @@ export default {
 </script>
 
 <style>
-.exact {
-  background: #00ff00
-}
-.active {
-  background: #00ff00
-}
 </style>
