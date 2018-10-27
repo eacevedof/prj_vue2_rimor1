@@ -1,6 +1,14 @@
 # link
 
-- [link router](https://youtu.be/cBYTnk6p_UA?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
+- [Youtube - link router](https://youtu.be/cBYTnk6p_UA?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
+
+## Errores
+
+```
+vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <EafList> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+```
+    - Solución:
+    No hay
 
 > A Vue.js project
 

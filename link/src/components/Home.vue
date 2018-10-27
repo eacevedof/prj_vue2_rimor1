@@ -1,22 +1,23 @@
 <template>
   <!--home.vue-->
   <div>
-    <h1>{{msg}}</h1>
+    <h3>{{msg}}</h3>
       <div class="row">
         <div class="col-sm-4">
-            <h1>Albums</h1>
-            <eaf-list v-bind:aritems="albums"/>
+            <h4>Albums</h4>
+            <EafList v-bind:aritems="albums"/>
         </div>
         <div class="col-sm-4">
-            <h1>Posts</h1>
-            <eaf-list v-bind:aritems="posts"/>
+            <h4>Posts</h4>
+            <EafList v-bind:aritems="posts"/>
         </div>      
         <div class="col-sm-4">
-            <h1>Photos</h1>
-            <eaf-list v-bind:aritems="photos"/>
-        </div>                  
+            <h4>Photos</h4>
+            <EafList v-bind:aritems="photos"/>
+        </div>
+        <hr/>            
         <div class="col-sm-12">
-            <h1>JSON</h1>
+            <h4>JSON</h4>
             <pre style="background:#e0e0e0; border:1px solid #ccc">
                 {{ $data }}
             </pre>
@@ -29,7 +30,8 @@
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
 import axios from 'axios'
-import VueAxios from 'vue-axios'
+//import VueAxios from 'vue-axios'
+import EafList from '@/components/EafList'
 //Vue.use(VueAxios, axios)
 
 export default {
@@ -54,14 +56,14 @@ export default {
     
     methods:{
         get_posts : function() {
-            const sUrlJson = "https://jsonplaceholder.typicode.com/posts"
+            const sUrlJson = "https://jsonplaceholder.typicode.com/posts/3"
             axios.get(sUrlJson).then((response)=>{
                 this.posts = response.data
             })
         },//get_posts
 
         get_albums : function() {
-            const sUrlJson = "https://jsonplaceholder.typicode.com/albums"
+            const sUrlJson = "https://jsonplaceholder.typicode.com/albums/3"
             axios.get(sUrlJson).then((response)=>{
                 this.albums = response.data
             })

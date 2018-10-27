@@ -9,6 +9,7 @@ function resolve (dir) {
 }
 
 const createLintingRule = () => ({
+  /*27/10/2018 comentado para que no use EsLint
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
@@ -17,6 +18,7 @@ const createLintingRule = () => ({
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
+  */
 })
 
 module.exports = {
