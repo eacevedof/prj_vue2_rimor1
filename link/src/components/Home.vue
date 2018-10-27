@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-sm-4">
             <h4>Albums</h4>
-            <EafList/>
+            <EafList  v-bind:aritems="albums"/>
         </div>
         <div class="col-sm-4">          
             <h4>Posts</h4>
@@ -65,7 +65,7 @@ export default {
         },//get_posts
 
         get_albums : function() {
-            const sUrlJson = "https://jsonplaceholder.typicode.com/albums/3"
+            const sUrlJson = "https://jsonplaceholder.typicode.com/albums/"
             axios.get(sUrlJson).then((response)=>{
                 this.albums = response.data
             })
