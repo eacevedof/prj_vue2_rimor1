@@ -3,6 +3,13 @@
 > La aplicación usa **VueRouter**, **Axios** y **jsonplaceholder.typicode.com**
 > La he refactorizado varias veces y creado **modelos**, **vistas** y **elementos**
 
+- **Posts** https://jsonplaceholder.typicode.com/posts/1
+- **Comments** https://jsonplaceholder.typicode.com/comments/1
+- **Albums** https://jsonplaceholder.typicode.com/albums/1
+- **Photos** https://jsonplaceholder.typicode.com/photos/1
+- **Users** https://jsonplaceholder.typicode.com/users/1
+- **Todos** https://jsonplaceholder.typicode.com/todos/1
+
 - [En ejecución - vuerouter.eduardoaf.com](http://vuerouter.eduardoaf.com/)
 - [Tutorial Vue2](https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vue2)
 - [Youtube Rimorsoft - link router](https://youtu.be/cBYTnk6p_UA?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)

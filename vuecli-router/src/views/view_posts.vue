@@ -5,6 +5,9 @@
         <p> 
         - Posts.vue -
         </p>
+        <router-link to="/posts/new" 
+            class="btn btn-primary btn-lg active" 
+            role="button" aria-pressed="true"> New post </router-link><br/>
         <eaflist v-bind:aritems="rows"/>
     </div>
     <!--/Posts.vue-->

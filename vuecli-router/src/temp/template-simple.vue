@@ -12,8 +12,9 @@
 <script>
 export default {
     name: 'template-simple',
+    pagetitle: 'template-simple',
 
-    components : {
+    components: {
         
     },
 
@@ -30,7 +31,10 @@ export default {
     },//created()
 
     methods:{
-
+        select(){},
+        insert(){},
+        update(){},
+        delete(){}
     },//methods
 
     computed: {

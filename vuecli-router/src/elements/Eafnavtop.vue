@@ -7,7 +7,11 @@
             <ul class="navbar-nav">
                 <li v-for="item in routes" v-bind:key="item.id" class="nav-item">
                     <router-link v-bind:to="item.path" class="nav-link"> {{ item.text }} </router-link>
-                </li>  
+                </li> 
+                <li class="nav-item">
+                    <a href="https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vuecli-router" 
+                        target="_blank" class="nav-link">In Github</a>    
+                </li> 
             </ul>
         </div>
     </nav> 

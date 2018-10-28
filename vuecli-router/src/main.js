@@ -6,10 +6,12 @@ import App from '@/App'
 import router from '@/mixins/router'
 import 'bootstrap'
 import Pagetitle from '@/mixins/pagetitle'
-
+import Toasted from 'vue-toasted'
 //https://tahazsh.com/vuebyte-change-page-title
 //https://github.com/vuejs/vue-hackernews-2.0/blob/master/src/app.js
+
 Vue.mixin(Pagetitle)
+Vue.use(Toasted)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
