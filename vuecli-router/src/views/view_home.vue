@@ -32,9 +32,9 @@
 
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
-import ModelPost from '@/models/ModelPost.js'
-import ModelAlbum from '@/models/ModelAlbum.js'
-import ModelPhoto from '@/models/ModelPhoto.js'
+import ModelPost from '@/models/model_post'
+import ModelAlbum from '@/models/model_album'
+import ModelPhoto from '@/models/model_photo'
 
 import eaflist from '@/elements/Eaflist'
 import eaflistimg from '@/elements/Eaflistimg'

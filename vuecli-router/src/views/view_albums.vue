@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ModelAlbum from '@/models/ModelAlbum.js'
+import ModelAlbum from '@/models/model_album'
 import eaflist from '@/elements/Eaflist'
 
 export default {

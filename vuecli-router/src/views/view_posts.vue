@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ModelPost from '@/models/ModelPost.js'
+import ModelPost from '@/models/model_post'
 import eaflist from '@/elements/Eaflist'
 
 export default {

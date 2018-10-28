@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ModelPhoto from '@/models/ModelPhoto.js'
+import ModelPhoto from '@/models/model_photo'
 import eaflistimg from '@/elements/Eaflistimg'
 
 export default {
