@@ -22,6 +22,9 @@ export default {
         console.log("template-simple.data()")
         return {
             title: "template-simple",
+            
+            response : null,
+            status: 200,            
             rows: []
         }
     },//data()
