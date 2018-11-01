@@ -18,17 +18,22 @@
 
 ## Errores
 
-```
-vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <EafList> - did you register the component correctly? 
-For recursive components, make sure to provide the "name" option.
-```
-- **Solución:**
-- Faltaba incluir el atributo **components**:
-```js
-    components : {
-    Eaflist
-},
-```
+1.- Uno
+    ```
+    vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <EafList> - did you register the component correctly? 
+    For recursive components, make sure to provide the "name" option.
+    ```
+    - **Solución:**
+    - Faltaba incluir el atributo **components**:
+    ```js
+        components : {
+        Eaflist
+    },
+    ```
+2.- Dos
+    - Si se usa vue-router hay que usar .htaccess
+    - [.htaccess](https://stackoverflow.com/questions/47879936/vue-router-hosting-on-apache2)
+    
 
 ## Build Setup
 
