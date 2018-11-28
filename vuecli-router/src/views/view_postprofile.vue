@@ -1,4 +1,13 @@
 <!--
+id (employees.emp_no)
+nombre (employees.first_name) 
+apellidos (employees.last_name)
+genero (employees.gender)
+fecha_contratacion (employees.hire_date)
+fecha_nacimiento (employees.birth_date)
+departamento (departments.dept_name)
+cargo (titles.title) 
+salario (salaries.salary)
 
 -->
 <template>
@@ -9,11 +18,32 @@
         
         <ul>
             <li>
-                <span><b>Nº</b></span> <span>{{item.id}}</span>
+                <span><b>Id:</b></span> <span>{{item.id}}</span>
             </li>
             <li>
-                <span><b>Nombre</b></span> <span>{{item.firstname}}</span>
-            </li>            
+                <span><b>Nombre:</b></span> <span>{{item.firstname}}</span>
+            </li>
+            <li>
+                <span><b>Apellidos:</b></span> <span>{{item.lastname}}</span>
+            </li>
+            <li>
+                <span><b>Género:</b></span> <span>{{item.gender}}</span>
+            </li>
+            <li>
+                <span><b>Fec. Contratación:</b></span> <span>{{item.hiredate}}</span>
+            </li>
+            <li>
+                <span><b>Fec. Nacimiento:</b></span> <span>{{item.birthdate}}</span>
+            </li>
+            <li>
+                <span><b>Departamento:</b></span> <span>{{item.depname}}</span>
+            </li>
+            <li>
+                <span><b>Cargo:</b></span> <span>{{item.title}}</span>
+            </li>
+            <li>
+                <span><b>Salario:</b></span> <span>{{item.salary}}</span>
+            </li>                        
         </ul>
     </div>
     <!--/Postprofile.vue-->
@@ -43,8 +73,8 @@ export default {
     },//data()
     
     created: function () {
-   
-   },//created()
+        this.get_profile()    
+    },//created()
 
     methods:{
         get_profile : function() {         
