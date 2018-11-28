@@ -29,7 +29,7 @@ module.exports = {
         console.log("Eafnavtop.data()")
         return { 
             routes: [
-                {id:1, path:'/', text:'Home'},
+                {id:1, path:'/', text:'Employees'},
                 {id:2, path:'/employee/new', text:'New employee'},
             ]
         }

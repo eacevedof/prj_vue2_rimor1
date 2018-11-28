@@ -1,13 +1,10 @@
 <template>
     <!--home.vue-->
     <div>
-        <h1>Home</h1>
-        <p> 
-        - Home.vue -
-        </p>
+        <h1>Employees</h1>
+
         <div class="row">
             <div class="col-sm-4">          
-                <h4>Employees</h4>
                 <eaflist v-bind:aritems="posts"/>
             </div>    
         </div>
