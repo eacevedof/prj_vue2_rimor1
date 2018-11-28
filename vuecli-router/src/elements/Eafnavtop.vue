@@ -1,7 +1,7 @@
 <template>
     <!--Eafnavtop-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand company" href="#">&nbsp;&nbsp;The Company&nbsp;&nbsp;</a>
+        <a class="navbar-brand company" href="#">&nbsp;&nbsp;API&nbsp;&nbsp;</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#divNavbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" 
             aria-label="Toggle navigation">

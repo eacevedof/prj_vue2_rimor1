@@ -18,18 +18,53 @@
             <div class="form-group required">
                 <label class="control-label" for="txtTitle">Title</label>
                 <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
-                    placeholder="This is a post title" v-model="posttitle" required
+                    placeholder="This is a post title" v-model="firstname" required
+                >
+                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+            </div>
+            <div class="form-group required">
+                <label class="control-label" for="txtTitle">Title</label>
+                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
+                    placeholder="This is a post title" v-model="firstname" required
+                >
+                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+            </div>
+            <div class="form-group required">
+                <label class="control-label" for="txtTitle">Title</label>
+                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
+                    placeholder="This is a post title" v-model="firstname" required
+                >
+                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+            </div>
+            <div class="form-group required">
+                <label class="control-label" for="txtTitle">Title</label>
+                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
+                    placeholder="This is a post title" v-model="firstname" required
+                >
+                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+            </div>
+            <div class="form-group required">
+                <label class="control-label" for="txtTitle">Title</label>
+                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
+                    placeholder="This is a post title" v-model="firstname" required
+                >
+                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+            </div>            
+            <div class="form-group required">
+                <label class="control-label" for="txtTitle">Title</label>
+                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
+                    placeholder="This is a post title" v-model="firstname" required
                 >
                 <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
             </div>
             <div class="form-group required">
                 <label for="txtBody" class="control-label">Content</label>
                 <textarea id="txtBody" class="form-control" aria-describedby="Body" 
-                    placeholder="Loren ipsum ..." v-model="postbody" required
+                    placeholder="Loren ipsum ..." v-model="lastname" required
                 ></textarea>
                 <small id="txtBodyHelp" class="form-text text-muted">Your post content.</small>
             </div>
-            <input type="hidden" id="hidUserId" v-model="postuserid">
+            <input type="hidden" id="hidUserId" v-model="birthname">
             <input type="submit" class="btn btn-dark" value=" Save ">
         </form>
     </div>
@@ -38,7 +73,13 @@
 
 <script>
 import ModelPost from '@/models/model_post'
-
+/*first_name
+last_name
+birth_name
+gender
+dept_no
+title
+salary */
 
 export default {
     name: 'Postnew',
@@ -55,9 +96,14 @@ export default {
             httpstatus: 200,
             result: "",
 
-            posttitle: "",
-            postbody: "",
-            postuserid: "aabb",
+            firstname: "",
+            lastname: "",
+            birthname: "aabb",
+            gender: "aabb",
+            deptno: "aabb",
+            utitle: "aabb",
+            salary: "aabb",
+
 
             rows: [],
         }
@@ -72,9 +118,9 @@ export default {
         select(){},
         insert(){
             let oData = {
-                title: this.posttitle,
-                body: this.postbody,
-                userId: this.postuserid
+                title: this.firstname,
+                body: this.lastname,
+                userId: this.birthname
             }
 
             ModelPost.insert(oData,(response)=>{
@@ -95,8 +141,8 @@ export default {
         delete(){},
 
         fieldreset(){
-            this.posttitle = ''
-            this.postbody = ''
+            this.firstname = ''
+            this.lastname = ''
         }
     },//methods
 

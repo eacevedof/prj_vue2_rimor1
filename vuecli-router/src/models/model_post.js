@@ -2,10 +2,10 @@
 import axios from 'axios'
 
 export default {
-    urldata : 'https://jsonplaceholder.typicode.com/posts',
+    urldata : 'http://telecoming.eduardoaf.com/empleados',
     get_data : function(fnLoad) {
         console.log("ModelPost.get_data()")
-        const sUrlJson = this.urldata + '/?_limit=20'
+        const sUrlJson = this.urldata
         axios.get(sUrlJson).then(fnLoad)
     },//get_data()
 

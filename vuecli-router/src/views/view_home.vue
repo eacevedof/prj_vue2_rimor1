@@ -7,24 +7,9 @@
         </p>
         <div class="row">
             <div class="col-sm-4">          
-                <h4>Posts</h4>
+                <h4>Employees</h4>
                 <eaflist v-bind:aritems="posts"/>
             </div>    
-            <div class="col-sm-4">
-                <h4>Albums</h4>
-                <eaflist v-bind:aritems="albums"/>
-            </div>          
-            <div class="col-sm-4">
-                <h4>Photos</h4>
-                <eaflistimg v-bind:aritems="photos"/>
-            </div>
-            <hr/>            
-            <div class="col-sm-12">
-                <h4>JSON</h4>
-                <pre style="background:#e0e0e0; border:1px solid #ccc">
-                    {{ $data }}
-                </pre>
-            </div>
         </div>
     </div>
     <!--/home.vue-->
@@ -50,8 +35,8 @@ export default {
     created: function () {
         console.log("create()")
         this.posts = this.get_posts()
-        this.albums = this.get_albums()
-        this.photos = this.get_photos()
+//        this.albums = this.get_albums()
+//        this.photos = this.get_photos()
     },//created()
 
     data(){
@@ -67,7 +52,8 @@ export default {
     methods:{
         get_posts : function() {         
             ModelPost.get_data((response)=>{
-                this.posts = response.data
+                this.posts = response.data.data
+                //console.log(this.posts,"uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu")
             })
         },//get_posts()
 
