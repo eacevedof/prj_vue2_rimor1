@@ -3,69 +3,64 @@
 -->
 <template>
     <!--Postnew.vue-->
-    <div>
+    <div class="w-50 p-3">
         <h1>{{title}}</h1>
-        <p> 
-        </p>   
-        <!-- <pre v-if="result">{{result}}</pre> -->
+
         <form v-on:submit.prevent="insert">
-            <div class="form-group required">
+            <div class="form-group ">
                 <label class="control-label" for="txtFirstname">Nombre</label>
                 <input type="text" id="txtFirstname" class="form-control" aria-describedby="Nombre" 
-                    placeholder="...nombre" v-model="firstname" required
+                    placeholder="...nombre" v-model="firstname" 
                 >
-                <small id="txtFirstnameHelp" class="form-text text-muted">Nombre.</small>
             </div>
 
-            <div class="form-group required">
+            <div class="form-group ">
                 <label class="control-label" for="txtLastname">Apellidos</label>
                 <input type="text" id="txtLastname" class="form-control" aria-describedby="Lastname" 
-                    placeholder="...apellidos" v-model="lastname" required
+                    placeholder="...apellidos" v-model="lastname" 
                 >
-	            <small id="txtLastnameHelp" class="form-text text-muted">Apellidos.</small>
             </div>
             
-            <div class="form-group required">
+            <div class="form-group ">
                 <label class="control-label" for="txtBirthdate">Fec. Nacimiento</label>
                 <input type="date" id="txtBirthdate" class="form-control" aria-describedby="Birthdate" 
-                    placeholder="...Fecha nacimiento" v-model="birthdate" required
+                    placeholder="...Fecha nacimiento" v-model="birthdate" 
                 >
-                <small id="txtBirthdateHelp" class="form-text text-muted">Fecha nacimiento</small>
             </div>
 
-            <div class="form-group required">
+            <div class="form-group ">
                 <label class="control-label" for="txtGender">Género</label>
-				<select id="selGender" v-model="gender" class="form-control" aria-describedby="Género" >
+				<select id="selGender" v-model="gender" class="form-control" aria-describedby="Género" required>
 					<option value="F">Mujer</option>
 					<option value="H">Hombre</option>
 				</select>
-                <small id="selGender" class="form-text text-muted">Género</small>
             </div>
             
-            <div class="form-group required">
+            <div class="form-group ">
                 <label class="control-label" for="selDepartment">Departamento</label>
-                <select id="selDepartment" v-model="deptno" class="form-control" aria-describedby="Departamento">
-                    <option v-for="item in departments" v-bind:key="item.id">{{item.name}}</option>
+                <select id="selDepartment" v-model="deptno" class="form-control" aria-describedby="Departamento" required>
+                    <option  v-bind:value="item.deptno" v-for="item in departments" v-bind:key="item.deptno">{{item.deptname}}</option>
                 </select>
             </div>       
 
-
-           <div class="form-group required">
+           <div class="form-group ">
                 <label class="control-label" for="selTitle">Cargo</label>
-                <select id="selTitle" v-model="deptno" class="form-control" aria-describedby="Cargo">
-                    <option v-for="item in titles" v-bind:key="item.id">{{item.name}}</option>
+                <select id="selTitle" v-model="utitle" class="form-control" aria-describedby="Cargo" required>
+                    <option v-bind:value="item.title" v-for="item in titles" v-bind:key="item.title">{{item.title}}</option>
                 </select>
             </div>
 
-            <div class="form-group required">
+            <div class="form-group ">
                 <label class="control-label" for="txtSalary">Salario</label>
-                <input type="number" step="0.01" id="txtSalary" class="form-control" aria-describedby="Salario" 
-                    placeholder="...salario" v-model="salary" required
+                <input type="number" step="0.01" id="txtSalary" class="form-control col-4" aria-describedby="Salario" 
+                    placeholder="20.000,55" v-model="salary"  
                 >
-                <small id="txtSalary" class="form-text text-muted">Salario</small>
             </div>
 
-            <input type="submit" class="btn btn-dark" value=" Save ">
+            <div class="form-group" style="padding:10px">
+                <input type="submit" class="btn btn-primary col-4 float-lg-right" style="margin-bottom:10px;" 
+                   value=" Save ">
+            </div>
         </form>
     </div>
     <!--/Postnew.vue-->
@@ -112,8 +107,8 @@ export default {
     },//data()
     
     created: function () {
-        this.titles = this.get_titles()
-        this.departments = this.get_departments()
+        this.get_titles()
+        this.get_departments()
     },//created()
 
     methods:{
@@ -147,10 +142,14 @@ export default {
                 //console.log(response)
                 this.result = response
                 this.httpstatus = response.status
-                if(this.httpstatus===201){
+
+                console.log(this.httpstatus,this.result.data)
+                if(this.httpstatus===200){
                     this.$toasted
-                        .success(`Employee created!! id:${this.result.data.id}`,{duration:5000,fullWidth:true})
+                        .success(`Employee created!! id: ${this.result.data.data.id}`,{duration:5000,fullWidth:true})
                     this.fieldreset()
+                    //window.location.href = "/"
+                    this.$router.push('/') 
                 }
                 else
                     this.$toasted
