@@ -12,7 +12,7 @@ salario (salaries.salary)
 -->
 <template>
     <div>
-        <h1>{{title}} {{item.nombre}} {{item.apellidos}}</h1>
+        <h1>{{title}} <br/> - {{item.nombre}} {{item.apellidos}}</h1>
         <p> 
         </p>   
         
@@ -64,7 +64,7 @@ export default {
     data(){
         console.log("Postprofile.data()")
         return {
-            title: "Employee profile ",
+            title: "Employee profile of:",
             httpstatus: 200,
             result: "",
 
