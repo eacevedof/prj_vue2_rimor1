@@ -1,17 +1,11 @@
 <!--
-{
-  "userId": 1,
-  "id": 9,
-  "title": "nesciunt iure omnis dolorem tempora et accusantium",
-  "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
-}
+
 -->
 <template>
     <!--Postnew.vue-->
     <div>
         <h1>{{title}}</h1>
         <p> 
-        - Postnew.vue -
         </p>   
         <!-- <pre v-if="result">{{result}}</pre> -->
         <form v-on:submit.prevent="insert">
@@ -30,6 +24,7 @@
                 >
 	            <small id="txtLastnameHelp" class="form-text text-muted">Apellidos.</small>
             </div>
+            
             <div class="form-group required">
                 <label class="control-label" for="txtBirthdate">Fec. Nacimiento</label>
                 <input type="date" id="txtBirthdate" class="form-control" aria-describedby="Birthdate" 
@@ -37,36 +32,39 @@
                 >
                 <small id="txtBirthdateHelp" class="form-text text-muted">Fecha nacimiento</small>
             </div>
+
             <div class="form-group required">
-                <label class="control-label" for="txtGender">Gender</label>
-				<select id="selGender" v-model="gender" class="form-control" aria-describedby="Gender" >
+                <label class="control-label" for="txtGender">Género</label>
+				<select id="selGender" v-model="gender" class="form-control" aria-describedby="Género" >
 					<option value="F">Mujer</option>
 					<option value="H">Hombre</option>
 				</select>
-                <small id="txtGenderHelp" class="form-text text-muted">Gender.</small>
+                <small id="selGender" class="form-text text-muted">Género</small>
             </div>
+            
             <div class="form-group required">
-                <label class="control-label" for="txtTitle">Title</label>
-                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
-                    placeholder="This is a post title" v-model="firstname" required
+                <label class="control-label" for="selDepartment">Departamento</label>
+                <select id="selDepartment" v-model="deptno" class="form-control" aria-describedby="Departamento">
+                    <option v-for="item in departments" v-bind:key="item.id">{{item.name}}</option>
+                </select>
+            </div>       
+
+
+           <div class="form-group required">
+                <label class="control-label" for="selTitle">Cargo</label>
+                <select id="selTitle" v-model="deptno" class="form-control" aria-describedby="Cargo">
+                    <option v-for="item in titles" v-bind:key="item.id">{{item.name}}</option>
+                </select>
+            </div>
+
+            <div class="form-group required">
+                <label class="control-label" for="txtSalary">Salario</label>
+                <input type="number" step="0.01" id="txtSalary" class="form-control" aria-describedby="Salario" 
+                    placeholder="...salario" v-model="salary" required
                 >
-                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
-            </div>            
-            <div class="form-group required">
-                <label class="control-label" for="txtTitle">Title</label>
-                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
-                    placeholder="This is a post title" v-model="firstname" required
-                >
-                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+                <small id="txtSalary" class="form-text text-muted">Salario</small>
             </div>
-            <div class="form-group required">
-                <label for="txtBody" class="control-label">Content</label>
-                <textarea id="txtBody" class="form-control" aria-describedby="Body" 
-                    placeholder="Loren ipsum ..." v-model="lastname" required
-                ></textarea>
-                <small id="txtBodyHelp" class="form-text text-muted">Your post content.</small>
-            </div>
-            <input type="hidden" id="hidUserId" v-model="birthname">
+
             <input type="submit" class="btn btn-dark" value=" Save ">
         </form>
     </div>
@@ -75,6 +73,7 @@
 
 <script>
 import ModelPost from '@/models/model_post'
+import ModelPicklist from '@/models/model_picklist'
 /*first_name
 last_name
 birth_name
@@ -85,7 +84,7 @@ salary */
 
 export default {
     name: 'Postnew',
-    pagetitle: 'New post',
+    pagetitle: 'New employee',
 
     components : {
         
@@ -94,35 +93,54 @@ export default {
     data(){
         console.log("Postnew.data()")
         return {
-            title: "New post",
+            title: "New employee",
             httpstatus: 200,
             result: "",
 
             firstname: "",
             lastname: "",
-            birthname: "aabb",
-            gender: "aabb",
-            deptno: "aabb",
-            utitle: "aabb",
-            salary: "aabb",
+            birthdate: "",
+            gender: "",
+            deptno: "",
+            utitle: "",
+            salary: "",
 
-
+            titles: [],
+            departments: [],
             rows: [],
         }
     },//data()
     
     created: function () {
-        console.log("Postnew.create()")
-
+        this.titles = this.get_titles()
+        this.departments = this.get_departments()
     },//created()
 
     methods:{
+        get_titles : function() {         
+            ModelPicklist.get_titles((response)=>{
+                this.titles = response.data.data
+            })
+        },//get_titles()
+
+        get_departments : function() {         
+            ModelPicklist.get_departments((response)=>{
+                this.departments = response.data.data
+            })
+        },//get_departments()
+
+
         select(){},
+
         insert(){
             let oData = {
-                title: this.firstname,
-                body: this.lastname,
-                userId: this.birthname
+                firstname: this.firstname,
+                lastname: this.lastname,
+                birthdate: this.birthdate,
+                gender: this.gender,
+                deptno: this.deptno,
+                utitle: this.utitle,
+                salary: this.salary
             }
 
             ModelPost.insert(oData,(response)=>{
@@ -131,7 +149,7 @@ export default {
                 this.httpstatus = response.status
                 if(this.httpstatus===201){
                     this.$toasted
-                        .success(`Post created!! id:${this.result.data.id}`,{duration:5000,fullWidth:true})
+                        .success(`Employee created!! id:${this.result.data.id}`,{duration:5000,fullWidth:true})
                     this.fieldreset()
                 }
                 else
@@ -151,6 +169,7 @@ export default {
     computed: {
 
     }//computed
+
 }//Postnew
 </script>
 

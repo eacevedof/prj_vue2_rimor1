@@ -5,9 +5,9 @@
         <p> 
         - Posts.vue -
         </p>
-        <router-link to="/posts/new" 
+        <router-link to="/employees/new" 
             class="btn btn-primary btn-lg active" 
-            role="button" aria-pressed="true"> New post </router-link><br/>
+            role="button" aria-pressed="true"> New employee </router-link><br/>
         <eaflist v-bind:aritems="rows"/>
     </div>
     <!--/Posts.vue-->
@@ -19,7 +19,7 @@ import eaflist from '@/elements/Eaflist'
 
 export default {
     name: 'Posts',
-    pagetitle: 'Posts',
+    pagetitle: 'Employees',
     components : {
         eaflist
     },
@@ -27,7 +27,7 @@ export default {
     data(){
         console.log("Posts.data()")
         return {
-            title: "Posts",
+            title: "Employees",
             rows: []
         }
     },//data()

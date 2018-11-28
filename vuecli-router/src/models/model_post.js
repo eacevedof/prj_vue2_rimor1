@@ -10,8 +10,9 @@ export default {
     },//get_data()
 
     insert : function(oData,fnResult) {
+        let urldata = 'http://telecoming.eduardoaf.com/empleados/insert'
         console.log("ModelPost.insert()")
-        const sUrlJson = this.urldata + ''
+        const sUrlJson = urldata
         axios.post(sUrlJson,oData).then(fnResult)
     },//insert()
 
