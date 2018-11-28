@@ -13,7 +13,7 @@
                     <router-link v-bind:to="item.path" class="nav-link"> {{ item.text }} </router-link>
                 </li> 
                 <li class="nav-item">
-                    <a href="https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vuecli-router" 
+                    <a href="https://github.com/eacevedof/prj_miniapi" 
                         target="_blank" class="nav-link">In Github</a>    
                 </li> 
             </ul>
@@ -30,9 +30,7 @@ module.exports = {
         return { 
             routes: [
                 {id:1, path:'/', text:'Home'},
-                {id:2, path:'/posts', text:'Posts'},
-                {id:3, path:'/albums', text:'Albums'},
-                {id:4, path:'/photos', text:'Photos'},
+                {id:2, path:'/employee/new', text:'New employee'},
             ]
         }
     }//data()

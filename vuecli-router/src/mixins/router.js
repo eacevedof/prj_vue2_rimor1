@@ -12,10 +12,8 @@ Vue.use(VueRouter)
 
 const arRoutes = [
     { path: '/', name: 'Home', component: Home },
-    { path: '/posts', name: 'Posts', component: Posts },
-    { path: '/albums', name: 'Albums', component: Albums },
-    { path: '/photos', name: 'Photos', component: Photos },
-    { path: '/posts/new', name: 'Post New', component: Postnew }
+    { path: '/employee/new', name: 'New employee', component: Postnew },
+    { path: '/employee/profile', name: 'Profile', component: Home }
 ]
 
 const oVueRouter = new VueRouter({
