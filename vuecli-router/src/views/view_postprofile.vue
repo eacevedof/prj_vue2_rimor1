@@ -12,7 +12,7 @@ salario (salaries.salary)
 -->
 <template>
     <div>
-        <h1>{{title}}</h1>
+        <h1>{{title}} {{item.nombre}} {{item.apellidos}}</h1>
         <p> 
         </p>   
         
@@ -21,28 +21,28 @@ salario (salaries.salary)
                 <span><b>Id:</b></span> <span>{{item.id}}</span>
             </li>
             <li>
-                <span><b>Nombre:</b></span> <span>{{item.firstname}}</span>
+                <span><b>Nombre:</b></span> <span>{{item.nombre}}</span>
             </li>
             <li>
-                <span><b>Apellidos:</b></span> <span>{{item.lastname}}</span>
+                <span><b>Apellidos:</b></span> <span>{{item.apellidos}}</span>
             </li>
             <li>
-                <span><b>Género:</b></span> <span>{{item.gender}}</span>
+                <span><b>Género:</b></span> <span>{{item.genero}}</span>
             </li>
             <li>
-                <span><b>Fec. Contratación:</b></span> <span>{{item.hiredate}}</span>
+                <span><b>Fec. Contratación:</b></span> <span>{{item.fecha_contratacion}}</span>
             </li>
             <li>
-                <span><b>Fec. Nacimiento:</b></span> <span>{{item.birthdate}}</span>
+                <span><b>Fec. Nacimiento:</b></span> <span>{{item.fecha_nacimiento}}</span>
             </li>
             <li>
-                <span><b>Departamento:</b></span> <span>{{item.depname}}</span>
+                <span><b>Departamento:</b></span> <span>{{item.departamento}}</span>
             </li>
             <li>
-                <span><b>Cargo:</b></span> <span>{{item.title}}</span>
+                <span><b>Cargo:</b></span> <span>{{item.cargo}}</span>
             </li>
             <li>
-                <span><b>Salario:</b></span> <span>{{item.salary}}</span>
+                <span><b>Salario:</b></span> <span>{{item.salario}}</span>
             </li>                        
         </ul>
     </div>
@@ -55,7 +55,7 @@ import ModelPicklist from '@/models/model_picklist'
 
 export default {
     name: 'Postprofile',
-    pagetitle: 'Profile of ',
+    pagetitle: 'Employee profile: ',
 
     components : {
         
@@ -64,7 +64,7 @@ export default {
     data(){
         console.log("Postprofile.data()")
         return {
-            title: "Profile of ",
+            title: "Employee profile ",
             httpstatus: 200,
             result: "",
 
@@ -73,15 +73,19 @@ export default {
     },//data()
     
     created: function () {
+  
         this.get_profile()    
     },//created()
 
     methods:{
-        get_profile : function() {         
-            ModelPost.get_profile((response)=>{
+        get_profile : function() {    
+            let id = this.$route.params.id
+            console.log(id,"route.params 2")     
+            ModelPost.get_profile({"id":id},(response)=>{
                 this.item = response.data.data
+                console.log(this.item,"this.item")
             })
-        },//get_titles()
+        },//get_profile()
      
     },//methods
 
