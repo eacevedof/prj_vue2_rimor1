@@ -16,32 +16,34 @@
         <!-- <pre v-if="result">{{result}}</pre> -->
         <form v-on:submit.prevent="insert">
             <div class="form-group required">
-                <label class="control-label" for="txtTitle">Title</label>
-                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
-                    placeholder="This is a post title" v-model="firstname" required
+                <label class="control-label" for="txtFirstname">Nombre</label>
+                <input type="text" id="txtFirstname" class="form-control" aria-describedby="Nombre" 
+                    placeholder="...nombre" v-model="firstname" required
                 >
-                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+                <small id="txtFirstnameHelp" class="form-text text-muted">Nombre.</small>
+            </div>
+
+            <div class="form-group required">
+                <label class="control-label" for="txtLastname">Apellidos</label>
+                <input type="text" id="txtLastname" class="form-control" aria-describedby="Lastname" 
+                    placeholder="...apellidos" v-model="lastname" required
+                >
+	            <small id="txtLastnameHelp" class="form-text text-muted">Apellidos.</small>
             </div>
             <div class="form-group required">
-                <label class="control-label" for="txtTitle">Title</label>
-                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
-                    placeholder="This is a post title" v-model="firstname" required
+                <label class="control-label" for="txtBirthdate">Fec. Nacimiento</label>
+                <input type="date" id="txtBirthdate" class="form-control" aria-describedby="Birthdate" 
+                    placeholder="...Fecha nacimiento" v-model="birthdate" required
                 >
-                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+                <small id="txtBirthdateHelp" class="form-text text-muted">Fecha nacimiento</small>
             </div>
             <div class="form-group required">
-                <label class="control-label" for="txtTitle">Title</label>
-                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
-                    placeholder="This is a post title" v-model="firstname" required
-                >
-                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
-            </div>
-            <div class="form-group required">
-                <label class="control-label" for="txtTitle">Title</label>
-                <input type="text" id="txtTitle" class="form-control" aria-describedby="Title" 
-                    placeholder="This is a post title" v-model="firstname" required
-                >
-                <small id="txtTitleHelp" class="form-text text-muted">Your post title.</small>
+                <label class="control-label" for="txtGender">Gender</label>
+				<select id="selGender" v-model="gender" class="form-control" aria-describedby="Gender" >
+					<option value="F">Mujer</option>
+					<option value="H">Hombre</option>
+				</select>
+                <small id="txtGenderHelp" class="form-text text-muted">Gender.</small>
             </div>
             <div class="form-group required">
                 <label class="control-label" for="txtTitle">Title</label>
