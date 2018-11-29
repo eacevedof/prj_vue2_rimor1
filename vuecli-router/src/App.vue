@@ -5,7 +5,7 @@
 		<!--router-link-->
 		<eafnavtop/>
 
-		<router-view/>
+		<router-view :key="$route.fullPath"></router-view>
 	</div>
 	<!--App.vue-->
 </template>
