@@ -13,9 +13,7 @@ salario (salaries.salary)
 <template>
     <div>
         <h1>{{title}} <br/> - {{item.nombre}} {{item.apellidos}}</h1>
-        <p> 
-        </p>   
-        
+
         <ul>
             <li>
                 <span><b>Id:</b></span> <span>{{item.id}}</span>

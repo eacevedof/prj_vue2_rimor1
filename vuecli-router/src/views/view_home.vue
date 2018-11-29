@@ -5,7 +5,7 @@
 
         <div class="row">
             <div class="col-sm-4">          
-                <eaflist v-bind:aritems="employees" v-bind:opages="oPagination"/>
+                <eaflist v-bind:aritems="employees" v-bind:opages="pagination"/>
             </div>    
         </div>
     </div>
@@ -29,13 +29,14 @@ export default {
  
     created: function () {
         this.get_employees()
+        console.log(this.pagination,"pagination en created")
     },//created()
 
     data(){
         return {
             title: "",
             employees: [],
-            oPagination: {}
+            pagination: {}
         }
     },//data()
     
@@ -45,8 +46,14 @@ export default {
             if(id === undefined) id=1
             console.log("get_employees: "+id)      
             ModelPost.get_data((response)=>{
+                console.log(response.data.pagination,"pagination en get_data")
                 this.employees = response.data.data
-                this.oPagination = response.data.pagination
+                this.pagination = {
+                    currpage: response.data.pagination.currpage,
+                    perpage: response.data.pagination.perpage,
+                    totpages: response.data.pagination.totpages,
+                    totregs: response.data.pagination.totregs
+                }
             },id)
         },//get_employees()
         

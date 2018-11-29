@@ -3,16 +3,12 @@
       <div class="col-lg-12 col-centered">
         <!--Eafpage-->
         <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-end">
+          <ul class="pagination">
 
-            <li class="page-item">
-              <router-link :to="`/10`" class="page-link">10</router-link>
+            <li v-for="n in opages.totpages" v-bind:key="n" class="page-item">
+              <router-link :to="`/${n}`" class="page-link">{{n}}</router-link>
             </li>
 
-            <li class="page-item">
-              <router-link :to="`/15`" class="btn btn-primary">15</router-link>
-
-            </li>
           </ul>
         </nav>
         <!--/Eafpage-->
@@ -57,8 +53,12 @@ module.exports = {
     name: "Eaflist",
     props: ["aritems","opages"],
 
-   components: {
-        
+    //{currpage: "2", totpages: 21, perpage: 50, totregs: 1002}
+    components: {
+
+    },
+    created(){
+      console.log(this.props[1],"list.created")
     },
 
     data() {
