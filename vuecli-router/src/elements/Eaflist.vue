@@ -10,11 +10,12 @@
             </li>
 
             <li class="page-item">
-              <router-link :to="`/2`" class="page-link">2</router-link>
+              <router-link :to="`/15`" class="btn btn-primary">15</router-link>
+
             </li>
 
             <li class="page-item">
-              <router-link :to="`/3`" class="page-link">3</router-link>
+              <router-link :to="`/employee/profile/10195`" class="btn btn-primary">10195</router-link>
             </li>
 
           </ul>

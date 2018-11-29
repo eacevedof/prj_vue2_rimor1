@@ -73,14 +73,13 @@ export default {
     },//data()
     
     created: function () {
-  
         this.get_profile()    
     },//created()
 
     methods:{
         get_profile : function() {    
             let id = this.$route.params.id
-            console.log(id,"route.params 2")     
+            console.log("get_profile: "+id)     
             ModelPost.get_profile({"id":id},(response)=>{
                 this.item = response.data.data
                 console.log(this.item,"this.item")

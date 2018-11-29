@@ -42,11 +42,12 @@ export default {
     methods:{
         get_employees : function() {     
             let id = this.$route.params.id
-            console.log(id,"route.params 2")      
+            if(id === undefined) id=1
+            console.log("get_employees: "+id)      
             ModelPost.get_data((response)=>{
                 this.employees = response.data.data
                 this.oPagination = response.data.pagination
-            })
+            },id)
         },//get_employees()
         
     },//methods

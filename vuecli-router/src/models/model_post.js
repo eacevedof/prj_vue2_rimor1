@@ -4,13 +4,18 @@ import axios from 'axios'
 
 export default {
    
-    get_data : function(fnLoad) {
-        //console.log(oData.id,"iPage")
-        let urldata = config.domain+'employees?page='//+oData.id
+    get_data(fnLoad,id) {
+        console.log("page-id:"+id)
+        let urldata = config.domain+'employees?page=3'//+oData.id
         axios.get(urldata).then(fnLoad)
     },//get_data()
 
-    insert : function(oData,fnResult) {
+    get_profile(oData,fnResult) {
+        let urldata = config.domain+'employees/profile?id='+oData.id
+        axios.post(urldata,oData).then(fnResult)
+    },//get_profile()    
+
+    insert(oData,fnResult) {
         let urldata = config.domain+'employees/insert'
         const oForm = new FormData()
 
@@ -19,11 +24,5 @@ export default {
         axios.post(urldata,oForm)
             .then(fnResult)
     },//insert()
-
-    get_profile : function(oData,fnResult) {
-        let urldata = config.domain+'employees/profile?id='+oData.id
-        console.log("ModelPost.insert()",urldata)
-        axios.post(urldata,oData).then(fnResult)
-    },//get_profile()    
 
 }//ModelPost

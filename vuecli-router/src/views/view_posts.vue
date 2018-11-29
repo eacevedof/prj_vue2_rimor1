@@ -30,17 +30,21 @@ export default {
     },//data()
     
     created: function () {
+        let iPage = this.$route.params.id
+        console.log("iPage - "+iPage)
         this.get_employees()
     },//created()
 
     methods:{
-        get_employees : function() {
+        get_employees() {
             let iPage = this.$route.params.id
-            console.log("iPage:"+iPage)
-            ModelPost.get_data({"id":iPage},(response)=>{
+            console.log("iPage yyy :"+iPage)
+            ModelPost.get_data(
+                (response)=>{
                 this.rows = response.data
-            })
+            },10)
         },//get_employees()
+        
     },//methods
 
     computed: {

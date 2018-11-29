@@ -7,11 +7,14 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div id="divNavbar" class="collapse navbar-collapse">
             <ul class="navbar-nav">
+
                 <li v-for="item in routes" v-bind:key="item.id" class="nav-item">
                     <router-link v-bind:to="item.path" class="nav-link"> {{ item.text }} </router-link>
                 </li> 
+
                 <li class="nav-item">
                     <a href="https://github.com/eacevedof/prj_miniapi" 
                         target="_blank" class="nav-link">In Github</a>    
