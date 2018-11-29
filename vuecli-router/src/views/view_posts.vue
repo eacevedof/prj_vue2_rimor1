@@ -2,12 +2,10 @@
     <!--Posts.vue-->
     <div>
         <h1>{{title}}</h1>
-        <p> 
-        - Posts.vue -
-        </p>
         <router-link to="/employees/new" 
             class="btn btn-primary btn-lg active" 
             role="button" aria-pressed="true"> New employee </router-link><br/>
+        
         <eaflist v-bind:aritems="rows"/>
     </div>
     <!--/Posts.vue-->
@@ -25,7 +23,6 @@ export default {
     },
 
     data(){
-        console.log("Posts.data()")
         return {
             title: "Employees",
             rows: []
@@ -33,17 +30,17 @@ export default {
     },//data()
     
     created: function () {
-        console.log("Posts.create()")
-        this.get_posts()
+        this.get_employees()
     },//created()
 
     methods:{
-        get_posts : function() {
-            console.log("Posts.methods.get_posts()")   
-            ModelPost.get_data((response)=>{
+        get_employees : function() {
+            let iPage = this.$route.params.id
+            console.log("iPage:"+iPage)
+            ModelPost.get_data({"id":iPage},(response)=>{
                 this.rows = response.data
             })
-        },//get_posts()
+        },//get_employees()
     },//methods
 
     computed: {

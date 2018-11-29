@@ -1,7 +1,6 @@
 //src/mixins/pagetitle.js
 function getTitle (vm) {
-    console.log("pagetitle.getTitle()")
-    console.log("vm.$options",vm.$options)
+    //console.log("vm.$options",vm.$options)
     const { pagetitle } = vm.$options
     if (pagetitle) {
         return typeof pagetitle === 'function'

@@ -38,15 +38,4 @@ module.exports = {
 </script>
 
 <style>
-/* 
-https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=2979FF 
-*/
-.company{
-    color:#004ecb!important;
-    /* font-weight: bold; */
-}
-.router-link-exact-active{
-    color:#2979ff!important;
-    /* font-weight: bold;  */
-} 
 </style>
