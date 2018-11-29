@@ -6,18 +6,13 @@
           <ul class="pagination justify-content-end">
 
             <li class="page-item">
-              <router-link :to="`/1`" class="page-link">1</router-link>
+              <router-link :to="`/10`" class="page-link">10</router-link>
             </li>
 
             <li class="page-item">
               <router-link :to="`/15`" class="btn btn-primary">15</router-link>
 
             </li>
-
-            <li class="page-item">
-              <router-link :to="`/employee/profile/10195`" class="btn btn-primary">10195</router-link>
-            </li>
-
           </ul>
         </nav>
         <!--/Eafpage-->

@@ -6,7 +6,7 @@ export default {
    
     get_data(fnLoad,id) {
         console.log("page-id:"+id)
-        let urldata = config.domain+'employees?page=3'//+oData.id
+        let urldata = config.domain+'employees?page='+id
         axios.get(urldata).then(fnLoad)
     },//get_data()
 
