@@ -32,7 +32,7 @@
                 <label class="control-label" for="txtGender">Género</label>
 				<select id="selGender" v-model="gender" class="form-control" aria-describedby="Género" required>
 					<option value="F">Mujer</option>
-					<option value="H">Hombre</option>
+					<option value="M">Hombre</option>
 				</select>
             </div>
             
@@ -52,7 +52,7 @@
 
             <div class="form-group ">
                 <label class="control-label" for="txtSalary">Salario</label>
-                <input type="number" step="0.01" id="txtSalary" class="form-control col-4" aria-describedby="Salario" 
+                <input type="number" step="1000" id="txtSalary" class="form-control col-4" aria-describedby="Salario" 
                     placeholder="20.000,55" v-model="salary"  
                 >
             </div>

@@ -12,37 +12,43 @@ salario (salaries.salary)
 -->
 <template>
     <div>
-        <h1>{{title}} <br/> - {{item.nombre}} {{item.apellidos}}</h1>
+        <h1>Employee Profile</h1>
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card col-lg-12" style="width: 20rem;">
+                                <img class="card-img-top" src="https://affordableamericaninsurance.com/valley-choice-insurance/wp-content/uploads/sites/78/2015/07/no-image-300x300.png" alt="Card image cap">          
+                            </div>
+                            <br/>
+                            <h5 class="card-title">{{item.nombre}} {{item.apellidos}}</h5>
+                        </div>
+                    </div>
+                </div>
 
-        <ul>
-            <li>
-                <span><b>Id:</b></span> <span>{{item.id}}</span>
-            </li>
-            <li>
-                <span><b>Nombre:</b></span> <span>{{item.nombre}}</span>
-            </li>
-            <li>
-                <span><b>Apellidos:</b></span> <span>{{item.apellidos}}</span>
-            </li>
-            <li>
-                <span><b>Género:</b></span> <span>{{item.genero}}</span>
-            </li>
-            <li>
-                <span><b>Fec. Contratación:</b></span> <span>{{item.fecha_contratacion}}</span>
-            </li>
-            <li>
-                <span><b>Fec. Nacimiento:</b></span> <span>{{item.fecha_nacimiento}}</span>
-            </li>
-            <li>
-                <span><b>Departamento:</b></span> <span>{{item.departamento}}</span>
-            </li>
-            <li>
-                <span><b>Cargo:</b></span> <span>{{item.cargo}}</span>
-            </li>
-            <li>
-                <span><b>Salario:</b></span> <span>{{item.salario}}</span>
-            </li>                        
-        </ul>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Datos</h5>
+                            <table>
+                                <tr><th>Id: </th><td>{{item.id}}</td></tr>
+                                <tr><th>Nombre: </th><td>{{item.nombre}}</td></tr>
+                                <tr><th>Apellidos: </th><td>{{item.apellidos}}</td></tr>
+                                <tr><th>Género: </th><td>{{item.genero}}</td></tr>
+                                <tr><th>Fec. Contratación: </th><td>{{item.fecha_contratacion}}</td></tr>
+                                <tr><th>Fec. Nacimiento: </th><td>{{item.fecha_nacimiento}}</td></tr>
+                                <tr><th>Departamento: </th><td>{{item.departamento}}</td></tr>
+                                <tr><th>Cargo: </th><td>{{item.cargo}}</td></tr>
+                                <tr><th>Salario: </th><td>{{item.salario}}</td></tr>
+                            </table><br/>
+                            <a href="/1" class="btn btn-primary">Go list</a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+        </div>
     </div>
     <!--/Postprofile.vue-->
 </template>
@@ -53,7 +59,7 @@ import ModelPicklist from '@/models/model_picklist'
 
 export default {
     name: 'Postprofile',
-    pagetitle: 'Employee profile: ',
+    pagetitle: 'Employee Profile',
 
     components : {
         
@@ -62,7 +68,7 @@ export default {
     data(){
         console.log("Postprofile.data()")
         return {
-            title: "Employee profile of:",
+            title: "Employee Profile",
             httpstatus: 200,
             result: "",
 

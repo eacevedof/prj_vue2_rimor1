@@ -40,6 +40,17 @@
           </tbody>
         </table>
 
+        <!--Eafpage-->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+
+            <li v-for="n in opages.totpages" v-bind:key="n" class="page-item">
+              <router-link :to="`/${n}`" class="page-link">{{n}}</router-link>
+            </li>
+
+          </ul>
+        </nav>
+        <!--/Eafpage-->
         
       </div>
   </div>
@@ -58,7 +69,7 @@ module.exports = {
 
     },
     created(){
-      console.log(this.props[1],"list.created")
+      //console.log(this.props[1],"list.created")
     },
 
     data() {
