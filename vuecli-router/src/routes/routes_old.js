@@ -15,17 +15,17 @@ const routes = [
   {
     path: '/',
     component: DashboardLayout,
-    redirect: '/admin/employees'
+    redirect: '/admin/overview'
   },
   {
     path: '/admin',
     component: DashboardLayout,
-    redirect: '/admin/employees',
+    redirect: '/admin/overview',
     children: [
       {
         path: 'overview',
         name: 'Overview',
-        component: TableList
+        component: Overview
       },
       {
         path: 'user',
@@ -70,5 +70,4 @@ function view(name) {
    var res= require('../components/Dashboard/Views/' + name + '.vue');
    return res;
 };**/
-
 export default routes
