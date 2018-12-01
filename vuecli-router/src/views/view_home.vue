@@ -14,7 +14,7 @@
 
 <script>
 //https://github.com/eacevedof/prj_vue2_rimor1/blob/master/vue2/video12/component.html
-import ModelPost from '@/models/model_post'
+import ModelEmployee from '@/models/model_employee'
 
 import eaflist from '@/elements/Eaflist'
 import eaflistimg from '@/elements/Eaflistimg'
@@ -45,7 +45,7 @@ export default {
             let id = this.$route.params.id
             if(id === undefined) id=1
             console.log("get_employees: "+id)      
-            ModelPost.get_data((response)=>{
+            ModelEmployee.get_data((response)=>{
                 console.log(response.data.pagination,"pagination en get_data")
                 this.employees = response.data.data
                 this.pagination = {

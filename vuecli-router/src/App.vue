@@ -18,10 +18,10 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import eafnavtop from '@/elements/Eafnavtop'
 
 export default {
-	name: 'App',
-	components: {
-		eafnavtop
-	}
+    name: 'App',
+    components: {
+            eafnavtop
+    }
 }
 </script>
 

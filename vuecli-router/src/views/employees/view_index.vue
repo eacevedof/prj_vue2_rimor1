@@ -1,5 +1,5 @@
 <template>
-    <!--Posts.vue-->
+    <!--Employees.vue-->
     <div>
         <h1>{{title}}</h1>
         <router-link to="/employees/new" 
@@ -8,15 +8,15 @@
         
         <eaflist v-bind:aritems="rows"/>
     </div>
-    <!--/Posts.vue-->
+    <!--/Employees.vue-->
 </template>
 
 <script>
-import ModelPost from '@/models/model_post'
+import ModelEmployee from '@/models/model_employee'
 import eaflist from '@/elements/Eaflist'
 
 export default {
-    name: 'Posts',
+    name: 'Employees',
     pagetitle: 'Employees',
     components : {
         eaflist
@@ -39,7 +39,7 @@ export default {
         get_employees() {
             let iPage = this.$route.params.id
             console.log("iPage yyy :"+iPage)
-            ModelPost.get_data(
+            ModelEmployee.get_data(
                 (response)=>{
                 this.rows = response.data
             },10)
@@ -50,5 +50,5 @@ export default {
     computed: {
 
     }//computed
-}//Posts.
+}//Employees.
 </script>
