@@ -6,7 +6,7 @@
                     <card>
                         <template slot="header">
                             <h4 class="card-title">Empleados</h4>
-                            <p class="card-category">Departamento, cargo y salario por fecha de contrato</p>
+                            <p class="card-category">Departamento, cargo y salario ordenados por fecha de contrato</p>
                         </template>
                         <div class="table-responsive">
                             <l-table class="table-hover table-striped" :columns="table1.columns" :data="table1.data">
@@ -35,7 +35,7 @@
 <script>
 import LTable from 'src/components/UIComponents/Table.vue'
 import Card from 'src/components/UIComponents/Cards/Card.vue'
-//import ModelEmployee from 'src/models/model_employee.js'
+import ModelEmployee from 'src/models/model_employee.js'
 const tableColumns = ['Id', 'Name', 'Salary', 'Country', 'City']
 const tableData = [
     {
@@ -84,13 +84,35 @@ export default {
             table1: {
                 columns: [...tableColumns],
                 data: [...tableData]
-            },
+            }
+/*            
             table2: {
                 columns: [...tableColumns],
                 data: [...tableData]
             }
+*/
         }
-    }
+    },
+    created: function () {
+        let iPage = this.$route.params.id
+        console.log("iPage - "+iPage)
+        this.get_employees()
+    },//created()
+
+    methods:{
+        get_employees() {
+            let iPage = this.$route.params.id
+            console.log("iPage yyy :"+iPage)
+            ModelEmployee.get_data((response)=>{
+                this.table.data = response.data
+            },10)
+        },//get_employees()
+        
+    },//methods
+
+    computed: {
+
+    }//computed    
 }
 </script>
 <style>
