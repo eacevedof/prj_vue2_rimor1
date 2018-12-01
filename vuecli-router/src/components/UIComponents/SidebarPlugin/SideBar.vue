@@ -7,7 +7,7 @@
         <div class="logo">
             <a href="#" class="simple-text">
                 <div class="logo-img">
-                  <img src="static/img/vue-logo.png" alt="">
+                    <img src="/static/img/telecoming_logo_iso.png" alt="">
                 </div>
                 {{title}}
             </a>

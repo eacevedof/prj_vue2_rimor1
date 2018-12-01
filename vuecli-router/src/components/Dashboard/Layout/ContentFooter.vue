@@ -5,14 +5,13 @@
             <nav>
                 <ul class="footer-menu">
                     <li>
-                        <router-link :to="{path:'/admin'}">Dashboard</router-link>
+                        <router-link :to="{path:'/admin'}">Home</router-link>
                     </li>
                 </ul>
             </nav>
             <div class="copyright text-center">
                 &copy; Coded by
                 <a href="https://github.com/eacevedof" target="_blank">Eduardo A.F</a>.
-                Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank">Creative Tim</a>.
             </div>
         </div>
     </footer>
