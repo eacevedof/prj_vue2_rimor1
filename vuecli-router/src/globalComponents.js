@@ -7,7 +7,8 @@ import DropDown from './components/UIComponents/Dropdown.vue'
 
 const GlobalComponents = {
   install (Vue) {
-    Vue.component('fg-input', fgInput)
+    //Vue.component('fg-input', fgInput)
+    //cabecera horizontal con Dropdown logout
     Vue.component('drop-down', DropDown)
   }
 }

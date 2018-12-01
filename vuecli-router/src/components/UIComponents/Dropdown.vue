@@ -1,27 +1,30 @@
 <template>
-  <li class="dropdown nav-item"
-      :is="tag"
-      :class="{show: isOpen}"
-      aria-haspopup="true"
-      :aria-expanded="isOpen"
-      @click="toggleDropDown"
-      v-click-outside="closeDropDown">
+    <li class="dropdown nav-item"
+        :is="tag"
+        :class="{show: isOpen}"
+        aria-haspopup="true"
+        :aria-expanded="isOpen"
+        @click="toggleDropDown"
+        v-click-outside="closeDropDown">
 
-    <a class="nav-link dropdown-toggle"
-       data-toggle="dropdown">
-      <slot name="title">
-        <i :class="icon"></i>
-        <span class="no-icon">{{title}}</span>
-        <b class="caret"></b>
-      </slot>
-    </a>
-    <div class="dropdown-menu" v-show="isOpen">
-      <slot></slot>
-    </div>
-  </li>
+        <!-- drop down notificaiones con contador -->
+<!--
+        <a class="nav-link dropdown-toggle"
+        data-toggle="dropdown">
+            <slot name="title">
+                <i :class="icon"></i>
+                    <span class="no-icon">{{title}}</span>
+                <b class="caret"></b>
+            </slot>
+        </a>
+-->
+        <div class="dropdown-menu" v-show="isOpen">
+            <slot></slot>
+        </div>
+    </li>
 </template>
 <script>
-  export default {
+export default {
     name: 'drop-down',
     props: {
       title: String,

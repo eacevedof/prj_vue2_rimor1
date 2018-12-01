@@ -13,13 +13,14 @@ Vue.use(LightBootstrap)
 
 // configure router
 const router = new VueRouter({
-  routes, // short for routes: routes
-  linkActiveClass: 'nav-item active'
+    mode: 'history',
+    routes, // short for routes: routes
+    linkActiveClass: 'nav-item active'
 })
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App),
+  render: h => h(App), //originalmente yo en mi otro poryecto no he usado esto
   router
 })
