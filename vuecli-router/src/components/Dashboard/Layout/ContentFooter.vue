@@ -10,9 +10,8 @@
                 </ul>
             </nav>
             <div class="copyright text-center">
-                &copy; Coded with
-                <i class="fa fa-heart heart"></i> by
-                <a href="https://github.com/cristijora" target="_blank">Cristi Jora</a>.
+                &copy; Coded by
+                <a href="https://github.com/eacevedof" target="_blank">Eduardo A.F</a>.
                 Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank">Creative Tim</a>.
             </div>
         </div>
