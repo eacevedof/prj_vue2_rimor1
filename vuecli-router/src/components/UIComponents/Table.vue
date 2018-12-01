@@ -1,18 +1,20 @@
 <template>
-  <table class="table">
-    <thead>
-        <slot name="columns">
-            <th v-for="column in columns">{{column}}</th>
-        </slot>
-    </thead>
-    <tbody>
-    <tr v-for="item in data">
-        <slot :row="item">
-            <td v-for="column in columns" v-if="hasValue(item, column)">{{itemValue(item, column)}}</td>
-        </slot>
-    </tr>
-    </tbody>
-  </table>
+    <table class="table">
+    <!-- table.vue-->
+      <thead>
+          <slot name="columns">
+              <th v-for="column in columns">{{column}}</th>
+          </slot>
+      </thead>
+      <tbody>
+      <tr v-for="item in data">
+          <slot :row="item">
+              <td v-for="column in columns" v-if="hasValue(item, column)">{{itemValue(item, column)}}</td>
+          </slot>
+      </tr>
+      </tbody>
+    <!--/table.vue-->
+    </table>
 </template>
 <script>
 export default {

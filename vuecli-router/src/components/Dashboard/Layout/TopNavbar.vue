@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg">
-        <!--TopNavbar.vue-->
+        <!--topnavbar.vue-->
         <div class="container-fluid">
             <a class="navbar-brand" href="/admin">Dashboard</a>
             <button type="button"
