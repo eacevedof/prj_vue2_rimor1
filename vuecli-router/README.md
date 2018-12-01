@@ -1,53 +1,45 @@
-# vuecli-router
+# [Vue Light Bootstrap Dashboard](vuejs.creative-tim.com/vue-light-bootstrap-dashboard) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
-> La aplicación usa **VueRouter**, **Axios** y **jsonplaceholder.typicode.com**
-> La he refactorizado varias veces y creado **modelos**, **vistas** y **elementos**
+> Admin dashboard based on light bootstrap dashboard UI template + vue-router
 
-- **Posts** https://jsonplaceholder.typicode.com/posts/1
-- **Comments** https://jsonplaceholder.typicode.com/comments/1
-- **Albums** https://jsonplaceholder.typicode.com/albums/1
-- **Photos** https://jsonplaceholder.typicode.com/photos/1
-- **Users** https://jsonplaceholder.typicode.com/users/1
-- **Todos** https://jsonplaceholder.typicode.com/todos/1
+This project is a vue version of [Light bootstrap dashboard](https://www.creative-tim.com/product/light-bootstrap-dashboard)
+designed for vue js. The dashboard includes Bootstrap 4, vue-router, chartist, google-maps and several other plugins/components.
 
-- [En ejecución - vuerouter.eduardoaf.com](http://vuerouter.eduardoaf.com/)
-- [Tutorial Vue2](https://github.com/eacevedof/prj_vue2_rimor1/tree/master/vue2)
-- [Youtube Rimorsoft - link router](https://youtu.be/cBYTnk6p_UA?list=PLhCiuvlix-rR1X3apg9CXY5KEX47sI-gc)
-- [Quitar hash # de la url - vue router](https://stackoverflow.com/questions/34623833/how-to-remove-hashbang-from-url)
-- <img src="https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5bd4dbcb4cfc473b24e2a879/37c67a151cf43eb2f4027883b2d23589/image.png" width="600" height="500"/>
+Check the [Live Demo here](vuejs.creative-tim.com/vue-light-bootstrap-dashboard).
 
-## Errores
+![](static/Dashboard.PNG)
+## :rocket: Getting started
 
-1.- Uno
-    ```
-    vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <EafList> - did you register the component correctly? 
-    For recursive components, make sure to provide the "name" option.
-    ```
-    - **Solución:**
-    - Faltaba incluir el atributo **components**:
-    ```js
-        components : {
-        Eaflist
-    },
-    ```
-2.- Dos
-    - Si se usa vue-router hay que usar .htaccess
-    - [.htaccess](https://stackoverflow.com/questions/47879936/vue-router-hosting-on-apache2)
-    
+Vue Light Bootstrap Dashboard is built on top of Bootstrap 4, Vuejs and Vue-router. To get started do the following steps:
+1. Download the project
+2. Make sure you have node.js (https://nodejs.org/en/) installed
+3. Type `npm install` in the source folder where `package.json` is located
+4. Type `npm run dev` to start the development server
 
-## Build Setup
+The repo uses [vue-cli](https://github.com/vuejs/vue-cli) scaffolding which takes care of the development setup with webpack and all the necessary modern tools to make web development faster and easier.
 
-``` bash
-# install dependencies
-npm install
+## [Documentation](https://cristijora.github.io/vue-light-bootstrap-dashboard/documentation/#/buttons)
 
-# serve with hot reload at localhost:8080
-npm run dev
+## :cloud: Build Setup
 
-# build for production with minification
-npm run build
+### install dependencies
+`npm install`
+### serve with hot reload at localhost:8000
+`npm run dev`
+### build for production with minification
+`npm run build`
+### run unit tests
+`npm run unit`
+### run and watch unit tests
+`npm run unit:watch`
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+## :clipboard: Contribution guide
+* `npm install` or `yarn install`
+* Please don't use jQuery or jQuery based plugins since there are many pure Vue alternatives
 
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+[CHANGELOG]: ./CHANGELOG.md
+[LICENSE]: ./LICENSE.md
+[version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
