@@ -11,7 +11,7 @@ Vue.use(VueRouter)
 
 const arRoutes = [
     { path: '/', name: 'home', component: Home },
-    { path: '/:id', name: 'employees', component: EmployeeIndex },
+    { path: '/employees/:id', name: 'employees', component: EmployeeIndex },
     { path: '/employee/new', name: 'employeenew', component: EmployeeNew },
     { path: '/employee/profile/:id', name: 'employeeprofile', component: EmployeeProfile }
 ]

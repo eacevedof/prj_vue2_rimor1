@@ -1,7 +1,7 @@
 <template>
     <!--home.vue-->
     <div>
-        <h1>Employees</h1>
+        <h1>HOME</h1>
 
         <div class="row">
             <div class="col-sm-4">          
