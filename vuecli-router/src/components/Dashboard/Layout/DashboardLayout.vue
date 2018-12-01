@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+        <!-- dashboardlayout.vue -->
         <side-bar>
             <mobile-menu slot="content"></mobile-menu>    
             <sidebar-link to="/admin/employees">
@@ -43,13 +44,11 @@
         </side-bar>
         <div class="main-panel">
             <top-navbar></top-navbar>
-
             <dashboard-content @click="toggleSidebar">
-
             </dashboard-content>
-
             <content-footer></content-footer>
         </div>
+        <!-- dashboardlayout.vue -->
     </div>
 </template>
 <style lang="scss">

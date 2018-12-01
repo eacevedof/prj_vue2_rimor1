@@ -4,6 +4,7 @@ import NotFound from '../components/GeneralViews/NotFoundPage.vue'
 
 // Admin pages
 import Overview from 'src/components/Dashboard/Views/Overview.vue'
+import UserNew from 'src/components/Dashboard/Views/UserNew.vue'
 import UserProfile from 'src/components/Dashboard/Views/UserProfile.vue'
 import TableList from 'src/components/Dashboard/Views/TableList.vue'
 import Typography from 'src/components/Dashboard/Views/Typography.vue'
@@ -11,57 +12,44 @@ import Icons from 'src/components/Dashboard/Views/Icons.vue'
 import Maps from 'src/components/Dashboard/Views/Maps.vue'
 import Notifications from 'src/components/Dashboard/Views/Notifications.vue'
 
-const routes = [
-  {
-    path: '/',
-    component: DashboardLayout,
-    redirect: '/admin/employees'
-  },
-  {
-    path: '/admin',
-    component: DashboardLayout,
-    redirect: '/admin/employees',
-    children: [
-      {
-        path: 'overview',
-        name: 'Overview',
-        component: TableList
-      },
-      {
-        path: 'user',
-        name: 'User',
-        component: UserProfile
-      },
-      {
-        path: 'table-list',
-        name: 'Table List',
-        component: TableList
-      },
-      {
-        path: 'typography',
-        name: 'Typography',
-        component: Typography
-      },
-      {
-        path: 'icons',
-        name: 'Icons',
-        component: Icons
-      },
-      {
-        path: 'maps',
-        name: 'Maps',
-        component: Maps
-      },
-      {
-        path: 'notifications',
-        name: 'Notifications',
-        component: Notifications
-      }
-    ]
-  },
-  { path: '*', component: NotFound }
+const routes = [{
+        path: '/',
+        component: DashboardLayout,
+        redirect: '/admin/employees'
+    },  
+    {
+    //aqui deberian ir solo graficos e iconos a los distintos módulos
+    //como no hay nada de esto en /admin/ se cargan los empleados        
+        path: '/admin',
+        component: DashboardLayout,
+        children: [{
+                path: 'employees',
+                name: 'employees',
+                component: TableList
+            },
+            {
+                path: 'employees/new',
+                name: 'employees-new',
+                component: UserNew
+            },             
+            {
+                path: 'employees/:id',
+                name: 'employees',
+                component: TableList
+            },            
+           
+            {
+                path: 'employees/profile/:id',
+                name: 'employees-profile',
+                component: UserProfile
+            }
+        ]
+    },
+    {
+        path: '*',
+        component: NotFound
+    }
 ]
-
 /**
  * Asynchronously load view (Webpack Lazy loading compatible)
  * The specified component must be inside the Views folder

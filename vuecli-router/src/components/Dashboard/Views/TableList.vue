@@ -9,7 +9,10 @@
                             <p class="card-category">Departamento, cargo y salario ordenados por fecha de contrato</p>
                         </template>
                         <div class="table-responsive">
-                            <l-table class="table-hover table-striped" :columns="table1.columns" :data="table1.data">
+                            <l-table class="table-hover table-striped" 
+                                :columns="table1.columns" :data="table1.data"
+                                :opagination="table1.opagination"
+                                >
                             </l-table>
                         </div>
                     </card>
@@ -36,44 +39,7 @@
 import LTable from 'src/components/UIComponents/Table.vue'
 import Card from 'src/components/UIComponents/Cards/Card.vue'
 import ModelEmployee from 'src/models/model_employee.js'
-const tableColumns = ['Id', 'Name', 'Salary', 'Country', 'City']
-const tableData = [
-    {
-        id: 1,
-        name: 'Dakota Rice',
-        salary: '$36.738',
-        country: 'Niger',
-        city: 'Oud-Turnhout'
-    },
-    {
-        id: 2,
-        name: 'Minerva Hooper',
-        salary: '$23,789',
-        country: 'Curaçao',
-        city: 'Sinaai-Waas'
-    },
-    {
-        id: 3,
-        name: 'Sage Rodriguez',
-        salary: '$56,142',
-        country: 'Netherlands',
-        city: 'Baileux'
-    },
-    {
-        id: 4,
-        name: 'Philip Chaney',
-        salary: '$38,735',
-        country: 'Korea, South',
-        city: 'Overland Park'
-    },
-    {
-        id: 5,
-        name: 'Doris Greene',
-        salary: '$63,542',
-        country: 'Malawi',
-        city: 'Feldkirchen in Kärnten'
-    }
-]
+const tableColumns = ['Id','Nombre','Apellidos','Contrato','Cargo','Salario','Depto.']
 export default {
     components: {
         LTable,
@@ -83,7 +49,13 @@ export default {
         return {
             table1: {
                 columns: [...tableColumns],
-                data: [...tableData]
+                data: [],
+                opagination:{
+                    currpage: 1,
+                    perpage: 50,
+                    totpages: 1,
+                    totregs: 100                    
+                }
             }
 /*            
             table2: {
@@ -100,12 +72,21 @@ export default {
     },//created()
 
     methods:{
-        get_employees() {
-            let iPage = this.$route.params.id
-            console.log("iPage yyy :"+iPage)
+        
+        get_employees : function() {     
+            let id = this.$route.params.id
+            if(id === undefined) id=1
+            console.log("get_employees: "+id)      
             ModelEmployee.get_data((response)=>{
-                this.table.data = response.data
-            },10)
+                console.log(response.data,"DATOS EN get_employees")
+                this.table1.data = response.data.data
+                this.table1.opagination = {
+                    currpage: response.data.pagination.currpage,
+                    perpage: response.data.pagination.perpage,
+                    totpages: response.data.pagination.totpages,
+                    totregs: response.data.pagination.totregs
+                }
+            },id)
         },//get_employees()
         
     },//methods
