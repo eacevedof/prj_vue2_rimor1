@@ -7,6 +7,10 @@
                         <template slot="header">
                             <h4 class="card-title">Empleados</h4>
                             <p class="card-category">Departamento, cargo y salario ordenados por fecha de contrato</p>
+                            <p class="card-category float-right">
+                                Pag {{table1.opagination.currpage}} / {{table1.opagination.totpages}}
+                                <small>(regs. {{table1.opagination.totregs}})</small>
+                            </p>
                         </template>
                         <div class="table-responsive">
                             <l-table class="table-hover table-striped" 
@@ -14,6 +18,10 @@
                                 :opagination="table1.opagination"
                                 >
                             </l-table>
+                            <p class="card-category float-right">
+                                Pag {{table1.opagination.currpage}} / {{table1.opagination.totpages}} <br/>
+                                <small>(regs. {{table1.opagination.totregs}})</small>
+                            </p>                            
                         </div>
                     </card>
                 </div>
@@ -89,7 +97,7 @@ export default {
         },
         
         get_employees : function() {  
-            this.show_toasted()
+            //this.show_toasted()
             let id = this.$route.params.id
             if(id === undefined) id=1
             console.log("get_employees: "+id)      
@@ -102,7 +110,7 @@ export default {
                     totpages: response.data.pagination.totpages,
                     totregs: response.data.pagination.totregs
                 }
-                this.clear_toasted()
+                //this.clear_toasted()
             },id)
         },//get_employees()
         

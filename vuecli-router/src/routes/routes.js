@@ -42,7 +42,12 @@ const routes = [{
                 path: 'employees/profile/:id',
                 name: 'employees-profile',
                 component: UserProfile
-            }
+            },
+            {
+                path: 'employees/delete/:id',
+                name: 'employees-delete',
+                component: UserProfile
+            }            
         ]
     },
     {

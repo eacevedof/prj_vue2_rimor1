@@ -26,7 +26,9 @@
                 <td>{{item.salario}}</td>
                 <td>{{item.departamento}}</td>
                 <th scope="row">
-                    <router-link :to="`/admin/employees/delete/${item.id}`" class="btn btn-primary">{{item.id}}</router-link>
+                    <router-link :to="`/admin/employees/delete/${item.id}`" class="btn btn-danger">
+                        Eliminar
+                    </router-link>
                 </th>                
             </tr> 
     <!--
