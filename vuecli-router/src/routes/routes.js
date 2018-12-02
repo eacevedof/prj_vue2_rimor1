@@ -25,7 +25,7 @@ const routes = [{
         children: [
             {
                 path: '/',
-                name: 'Overview',
+                name: 'pannel',
                 component: Overview
             },
             {
@@ -43,22 +43,21 @@ const routes = [{
                 name: 'employees',
                 component: TableList
             },            
-           
             {
                 path: 'employees/profile/:id',
                 name: 'employees-profile',
                 component: UserProfile
             },
             {
-                path: 'employees/delete/:id',
-                name: 'employees-delete',
+                path: 'employees/profile/:id',
+                name: 'employees-profile',
+                component: UserProfile
+            },            
+            {
+                path: 'employees/update/:id',
+                name: 'employees-update',
                 component: UserProfile
             },
-                  {
-        path: 'icons',
-        name: 'Icons',
-        component: Icons
-      },
         ]
     },
     {
