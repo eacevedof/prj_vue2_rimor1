@@ -102,6 +102,7 @@ export default {
                 this.item = response.data.data
                 console.log(this.item,"this.item")
             })
+            ModelEmployee.get_profile_pic()
         },//get_profile()
         
         show_toasted(){

@@ -6,6 +6,7 @@
                 <div class="col-md-8">
                     <edit-profile-form/>
                 </div>
+                <!-- imagen del usuario -->
                 <div class="col-md-4">
                     <user-card/>
                 </div>

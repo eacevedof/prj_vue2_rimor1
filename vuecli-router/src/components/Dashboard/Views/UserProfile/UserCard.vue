@@ -5,12 +5,12 @@
         <div class="author">
             <a href="#">
                 <img class="avatar border-gray" src="static/img/faces/face-3.jpg" alt="..." />
-
                 <h4 class="title">Mike Andrew<br />
-          <small>michael24</small>
-        </h4>
+                    <small>michael24</small>
+                </h4>
             </a>
         </div>
+<!--
         <p class="description text-center"> "Lamborghini Mercy
             <br> Your chick she so thirsty
             <br> I'm in that two seat Lambo"
@@ -20,6 +20,7 @@
             <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
             <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
         </div>
+-->
         <!--/usercard.vue -->
     </card>
 </template>
