@@ -2,10 +2,10 @@
     <nav class="navbar navbar-expand-lg">
         <!--topnavbar.vue-->
         <div class="container-fluid">
-            <a class="navbar-brand" href="/admin">
+            <router-link :to="{path:'/admin'}" class="navbar-brand">
                 <i class="nc-icon nc-app"></i>
                  Inicio
-            </a>
+            </router-link>
                           
             <button type="button"
             class="navbar-toggler navbar-toggler-right"
@@ -72,37 +72,38 @@
     </nav>
 </template>
 <script>
-  export default {
+export default {
     computed: {
-      routeName () {
-        const {name} = this.$route
-        return this.capitalizeFirstLetter(name)
-      }
+        routeName() {
+            const {
+                name
+            } = this.$route
+            return this.capitalizeFirstLetter(name)
+        }
     },
-    data () {
-      return {
-        activeNotifications: false
-      }
+    data() {
+        return {
+            activeNotifications: false
+        }
     },
     methods: {
-      capitalizeFirstLetter (string) {
-        return string.charAt(0).toUpperCase() + string.slice(1)
-      },
-      toggleNotificationDropDown () {
-        this.activeNotifications = !this.activeNotifications
-      },
-      closeDropDown () {
-        this.activeNotifications = false
-      },
-      toggleSidebar () {
-        this.$sidebar.displaySidebar(!this.$sidebar.showSidebar)
-      },
-      hideSidebar () {
-        this.$sidebar.displaySidebar(false)
-      }
+        capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1)
+        },
+        toggleNotificationDropDown() {
+            this.activeNotifications = !this.activeNotifications
+        },
+        closeDropDown() {
+            this.activeNotifications = false
+        },
+        toggleSidebar() {
+            this.$sidebar.displaySidebar(!this.$sidebar.showSidebar)
+        },
+        hideSidebar() {
+            this.$sidebar.displaySidebar(false)
+        }
     }
-  }
-
+}
 </script>
 <style>
 

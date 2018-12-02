@@ -6,20 +6,21 @@
             <div class="col-xl-3 col-md-6">
                 <stats-card>
                     <div slot="header" class="icon-danger">
-                        <a href="/admin/employees/1">
+                        <router-link :to="`/admin/employees/1`">
                             <i class="nc-icon nc-badge text-danger"></i>
-                        </a>
+                        </router-link>
                     </div>
+                    
                     <div slot="content">
                         <p class="card-category">Modulo</p>
-                        <a href="/admin/employees/1">
+                        <router-link :to="`/admin/employees/1`">
                             <h4 class="card-title">Empleados</h4>
-                        </a>
-                    </div>                  
-                    <div slot="footer">
-                        <a href="/admin/employees/new" class="stats">
+                        </router-link>
+                    </div>           
+                    <div slot="footer">  
+                        <router-link :to="`/admin/employees/new`" class="stats">
                             <i class="nc-icon nc-badge nc-simple-add"></i> NUEVO
-                        </a>               
+                        </router-link>
                     </div>
                 </stats-card>
             </div>
