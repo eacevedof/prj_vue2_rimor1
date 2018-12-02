@@ -5,7 +5,7 @@
    :data-image="backgroundImage">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="#" class="simple-text">
+            <a href="/admin" class="simple-text">
                 <div class="logo-img">
                     <img src="/static/img/telecoming_logo_iso.png" alt="">
                 </div>

@@ -22,7 +22,13 @@ const routes = [{
     //como no hay nada de esto en /admin/ se cargan los empleados        
         path: '/admin',
         component: DashboardLayout,
-        children: [{
+        children: [
+            {
+                path: '/',
+                name: 'Overview',
+                component: Overview
+            },
+            {
                 path: 'employees',
                 name: 'employees',
                 component: TableList

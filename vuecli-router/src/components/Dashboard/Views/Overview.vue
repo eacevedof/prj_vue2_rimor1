@@ -3,22 +3,27 @@
     <!--overview.vue-->
     <div class="container-fluid">     
         <div class="row">
-<!--
             <div class="col-xl-3 col-md-6">
                 <stats-card>
-                    <div slot="header" class="icon-warning">
-                        <i class="nc-icon nc-chart text-warning"></i>
+                    <div slot="header" class="icon-danger">
+                        <a href="/admin/employees/1">
+                            <i class="nc-icon nc-badge text-danger"></i>
+                        </a>
                     </div>
                     <div slot="content">
-                        <p class="card-category">Capacity</p>
-                        <h4 class="card-title">105GB</h4>
-                    </div>
+                        <p class="card-category">Modulo</p>
+                        <a href="/admin/employees/1">
+                            <h4 class="card-title">Empleados</h4>
+                        </a>
+                    </div>                  
                     <div slot="footer">
-                        <i class="fa fa-refresh"></i>Updated now
+                        <a href="/admin/employees/new" class="stats">
+                            <i class="nc-icon nc-badge nc-simple-add"></i> NUEVO
+                        </a>               
                     </div>
                 </stats-card>
             </div>
-
+<!--
             <div class="col-xl-3 col-md-6">
                 <stats-card>
                     <div slot="header" class="icon-success">

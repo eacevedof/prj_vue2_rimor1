@@ -1,11 +1,12 @@
 <template>
     <card>
         <template slot="header">
-            <h4 class="card-title">Perfil Empleado</h4>
-            <p class="card-category">Solo consulta</p>
-            <a class="float-right" href="/admin/employees">
-                <i class="nc-icon nc-zoom-split"></i>
-            </a>                
+            <h4 class="card-title">Perfil Empleado  
+                <a class="" href="/admin/employees">
+                    <i class="nc-icon nc-zoom-split text-primary"></i>
+                </a>    
+            </h4>
+            <p class="card-category">Solo consulta</p>            
         </template>
         <form>
 <!--            
@@ -26,7 +27,7 @@
 -->
             <div class="row">
                 <div class="col-md-2">
-                    <fg-input type="text" label="Id" placeholder="Id" v-model="item.id" readonly/>
+                    <p class="text-primary">ID: {{item.id}}</p>
                 </div>                
             </div>
 
