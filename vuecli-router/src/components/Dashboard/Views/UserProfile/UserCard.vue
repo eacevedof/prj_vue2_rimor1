@@ -1,12 +1,16 @@
 <template>
     <card class="card-user">
         <!-- usercard.vue -->
-        <img slot="image" src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..." />
+        <img
+             slot="image" 
+             src="http://www.smartroombcn.com/wp-content/uploads/2018/06/MWC_TELECOMING_4_APAISADO.jpg" 
+             alt="..." />
+        
         <div class="author">
             <a href="#">
-                <img class="avatar border-gray" src="static/img/faces/face-3.jpg" alt="..." />
-                <h4 class="title">Mike Andrew<br />
-                    <small>michael24</small>
+                <img id="imgUser" class="avatar border-gray" src="https://previews.123rf.com/images/salamatik/salamatik1801/salamatik180100019/92979836-ic%C3%B4ne-de-visage-anonyme-de-profil-personne-silhouette-grise-avatar-par-d%C3%A9faut-masculin-photo-placeholder-.jpg" alt="..." />
+                <h4 class="title">{{item.firstname}} {{item.lastname}}<br />
+                    <small>{{item.id}}</small>
                 </h4>
             </a>
         </div>
@@ -27,11 +31,17 @@
 <script>
 import Card from 'src/components/UIComponents/Cards/Card.vue'
 export default {
+    props: ["propitem"],
     components: {
         Card
     },
     data() {
         return {
+            item:{
+                id:"",
+                firstname: "",
+                lastname:"",
+            },
             details: [{
                 title: '12',
                 subTitle: 'Files'
