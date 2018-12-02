@@ -15,12 +15,17 @@ export default {
         axios.post(urldata,oData).then(fnResult)
     },//get_profile()    
 
-    get_profile_pic(){
-       let urldata = "https://randomuser.me/api/?gender=female"
-       axios.get(urldata).then((response)=>{
-           
-           console.log(response.data.results[0].picture,"image pic")
-       })
+    get_profile_pic(sGender){
+        sGender = sGender || "female"
+        let urldata = `https://randomuser.me/api/?gender=${sGender}`
+        axios.get(urldata).then((response)=>{
+            let oPicture = response.data.results[0].picture
+            console.log(response.data.results[0].picture,"image pic")
+            let eImg = document.getElementById("imgUser")
+            if(eImg && oPicture){
+                eImg.src=oPicture.large
+            }
+        })
     },
 
     insert(oData,fnResult) {
