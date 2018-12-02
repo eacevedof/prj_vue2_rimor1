@@ -40,19 +40,14 @@ const routes = [{
             },             
             {
                 path: 'employees/:id',
-                name: 'employees',
+                name: 'employees-pag',
                 component: TableList
             },            
             {
                 path: 'employees/profile/:id',
                 name: 'employees-profile',
                 component: UserProfile
-            },
-            {
-                path: 'employees/profile/:id',
-                name: 'employees-profile',
-                component: UserProfile
-            },            
+            },          
             {
                 path: 'employees/update/:id',
                 name: 'employees-update',

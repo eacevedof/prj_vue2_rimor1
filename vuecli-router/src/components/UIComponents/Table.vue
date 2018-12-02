@@ -3,7 +3,14 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li v-for="n in opagination.totpages" v-bind:key="n" class="page-item">
-                    <router-link :to="`/admin/employees/${n}`" class="page-link">{{n}}</router-link>
+                    <router-link v-if="searchtag"
+                        :to="{ name: 'employees-pag', params: { id: n }, query: { s:searchtag }}" 
+                        class="page-link">{{n}}
+                    </router-link>
+                    <router-link v-else="searchtag"
+                        :to="{ name: 'employees-pag', params: { id: n }}" 
+                        class="page-link">{{n}}
+                    </router-link>                
                 </li>
             </ul>
         </nav>
@@ -45,13 +52,18 @@
             </tbody>
         <!--/table.vue-->
         </table>
+<!--
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li v-for="n in opagination.totpages" v-bind:key="n" class="page-item">
-                    <router-link :to="`/admin/employees/${n}`" class="page-link">{{n}}</router-link>
+                    <router-link 
+                        :to="{ name: 'employeespag', params: { id: n }, query: { busco:'algo' }}" 
+                        class="page-link">{{n}}
+                    </router-link>
                 </li>
             </ul>
-        </nav>        
+        </nav> 
+-->
     </div>
 </template>
 <script>
@@ -62,8 +74,29 @@ export default {
         data: Array,
         opagination: {}
     },
-    
+    data() {
+        return {
+            currpage: 0,
+            searchtag: ""
+        }
+    },    
+
+    created() {
+        this.currpage = this.$route.params.id
+        this.searchtag = this.get_searchtag()
+        
+        if(!this.searchtag && this.$route.query.s) {
+            this.searchtag = this.$route.query.s;
+        }
+    },    
     methods: {
+        get_searchtag(){
+            let sSearchTag = ""
+            let eSearch = document.getElementById("txtSearch")
+            if(eSearch) sSearchTag = eSearch.value
+            console.log(sSearchTag,"SEARCH_TAG")
+            return sSearchTag
+        },        
         hasValue (item, column) {
             return item[column.toLowerCase()] !== 'undefined'
         },

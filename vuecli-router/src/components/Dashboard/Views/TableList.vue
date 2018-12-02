@@ -6,7 +6,7 @@
                     <card>
                         <template slot="header">
                             <div class="float-right col-md-3">
-                                <input type="text" v-model="table1.searchtag" v-on:keyup.enter="on_sarch"
+                                <input type="text" id="txtSearch" v-model="table1.searchtag" v-on:keyup.enter="on_sarch"
                                        placeholder="buscar..." class="form-control">
                             </div>
                         </template>
@@ -50,10 +50,12 @@
     </div>
 </template>
 <script>
+    
 import LTable from 'src/components/UIComponents/Table.vue'
 import Card from 'src/components/UIComponents/Cards/Card.vue'
 import ModelEmployee from 'src/models/model_employee.js'
 const tableColumns = ['Id','Nombre','Apellidos','Contrato','Cargo','Salario','Depto.']
+
 export default {
     components: {
         LTable,
@@ -72,19 +74,15 @@ export default {
                     totregs: 0                    
                 }
             }
-/*            
-            table2: {
-                columns: [...tableColumns],
-                data: [...tableData]
-            }
-*/
         }
     },
-    created: function () {
+    created() {
         console.log(this,"THIS.LOADING...")
         let iPage = this.$route.params.id
+        this.table1.searchtag = this.$route.query.s
         console.log("iPage - "+iPage)
         this.get_employees()
+        
     },//created()
 
     methods:{
@@ -105,6 +103,9 @@ export default {
         
         on_sarch(){
             this.get_employees()
+            let stag = this.table1.searchtag
+            if(stag === undefined) stag=""
+            this.$router.replace({name: "employees-pag", query: {s:stag}})
         },
         
         get_employees() {  
@@ -113,7 +114,7 @@ export default {
             let stag = this.table1.searchtag
             
             if(id === undefined) id=1
-            console.log("get_employees: "+id)
+            if(stag === undefined) stag=""
             
             ModelEmployee.get_data((response)=>{
                 console.log(response.data,"DATOS EN get_employees")
@@ -124,6 +125,11 @@ export default {
                     totpages: response.data.pagination.totpages,
                     totregs: response.data.pagination.totregs
                 }
+                
+                //al buscar se puede dar que se este en la pag 17
+                //y el resultado devuelva 10 pag
+                //esto hace que no se vea nada
+                
                 //this.table1.searchtag = response.data.searchtag
                 //this.clear_toasted()
             },id,stag)
