@@ -47,7 +47,12 @@ const routes = [{
                 path: 'employees/delete/:id',
                 name: 'employees-delete',
                 component: UserProfile
-            }            
+            },
+                  {
+        path: 'icons',
+        name: 'Icons',
+        component: Icons
+      },
         ]
     },
     {

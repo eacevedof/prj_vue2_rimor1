@@ -2,7 +2,10 @@
     <card>
         <template slot="header">
             <h4 class="card-title">Perfil Empleado</h4>
-            <p class="card-category"></p>
+            <p class="card-category">Solo consulta</p>
+            <a class="float-right" href="/admin/employees">
+                <i class="nc-icon nc-zoom-split"></i>
+            </a>                
         </template>
         <form>
 <!--            
@@ -102,7 +105,7 @@ export default {
                 this.item = response.data.data
                 console.log(this.item,"this.item")
             })
-            ModelEmployee.get_profile_pic()
+            
         },//get_profile()
         
         show_toasted(){

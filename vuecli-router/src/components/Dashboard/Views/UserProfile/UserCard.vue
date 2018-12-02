@@ -7,7 +7,7 @@
              alt="..." />
         
         <div class="author">
-            <a href="#">
+            <a v-bind:href="'/admin/employees/profile/'+ item.id">
                 <img id="imgUser" class="avatar border-gray" src="https://previews.123rf.com/images/salamatik/salamatik1801/salamatik180100019/92979836-ic%C3%B4ne-de-visage-anonyme-de-profil-personne-silhouette-grise-avatar-par-d%C3%A9faut-masculin-photo-placeholder-.jpg" alt="..." />
                 <h4 class="title">{{item.firstname}} {{item.lastname}}<br />
                     <small>{{item.id}}</small>
@@ -30,13 +30,14 @@
 </template>
 <script>
 import Card from 'src/components/UIComponents/Cards/Card.vue'
+import ModelEmployee from '@/models/model_employee'
 export default {
-    props: ["propitem"],
     components: {
         Card
     },
     data() {
         return {
+            employee:{},
             item:{
                 id:"",
                 firstname: "",
@@ -54,7 +55,26 @@ export default {
             }]
         }
     },
+     created() {
+        this.get_profile()  
+    },//created()    
     methods: {
+        
+            get_profile() {    
+            let id = this.$route.params.id
+            console.log("get_profile: "+id)     
+            ModelEmployee.get_profile({"id":id},(response)=>{
+                this.employee = response.data.data
+                this.item.id = this.employee.id
+                this.item.firstname = this.employee.nombre
+                this.item.lastname = this.employee.apellidos
+                let genero = (this.employee.genero==="M"?"male":"female")
+                //api: https://randomuser.me/api/?gender=female
+                ModelEmployee.get_profile_pic(genero)   
+            })
+            
+        },//get_profile()
+     
         getClasses(index) {
             var remainder = index % 3
             if (remainder === 0) {
