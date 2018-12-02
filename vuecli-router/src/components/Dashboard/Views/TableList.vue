@@ -5,6 +5,12 @@
                 <div class="col-12">
                     <card>
                         <template slot="header">
+                            <div class="float-right col-md-3">
+                                <input type="text" v-model="table1.searchtag" v-on:keyup.enter="on_sarch"
+                                       placeholder="buscar..." class="form-control">
+                            </div>
+                        </template>
+                        <template slot="header">
                             <h4 class="card-title">Empleados</h4>
                             <p class="card-category">Departamento, cargo y salario ordenados por fecha de contrato</p>
                             <p class="card-category float-right">
@@ -57,12 +63,13 @@ export default {
         return {
             table1: {
                 columns: [...tableColumns],
+                searchtag: "",
                 data: [],
                 opagination:{
                     currpage: 1,
-                    perpage: 50,
-                    totpages: 1,
-                    totregs: 100                    
+                    perpage: 0,
+                    totpages: 0,
+                    totregs: 0                    
                 }
             }
 /*            
@@ -96,11 +103,18 @@ export default {
             this.$toasted.clear()
         },
         
-        get_employees : function() {  
+        on_sarch(){
+            this.get_employees()
+        },
+        
+        get_employees() {  
             //this.show_toasted()
             let id = this.$route.params.id
+            let stag = this.table1.searchtag
+            
             if(id === undefined) id=1
-            console.log("get_employees: "+id)      
+            console.log("get_employees: "+id)
+            
             ModelEmployee.get_data((response)=>{
                 console.log(response.data,"DATOS EN get_employees")
                 this.table1.data = response.data.data
@@ -110,8 +124,9 @@ export default {
                     totpages: response.data.pagination.totpages,
                     totregs: response.data.pagination.totregs
                 }
+                //this.table1.searchtag = response.data.searchtag
                 //this.clear_toasted()
-            },id)
+            },id,stag)
         },//get_employees()
         
     },//methods

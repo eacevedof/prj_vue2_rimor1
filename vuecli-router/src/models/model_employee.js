@@ -4,9 +4,9 @@ import axios from 'axios'
 export default {
    
    
-    get_data(fnLoad,id) {
-        console.log("page-id:"+id)
-        let urldata = oConfig.endpoint+'employees?page='+id
+    get_data(fnLoad,id,searchtag) {
+        console.log(id,searchtag,"employee.get_data")
+        let urldata = oConfig.endpoint+'employees?page='+id+'&s='+searchtag
         axios.get(urldata).then(fnLoad)
     },//get_data()
 

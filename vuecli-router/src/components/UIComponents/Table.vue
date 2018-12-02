@@ -17,7 +17,9 @@
             <tbody>
             <tr v-for="item in data" v-bind:key="item.id">
                 <th scope="row">
-                    <router-link :to="`/admin/employees/profile/${item.id}`" class="btn btn-primary">{{item.id}}</router-link>
+                    <router-link :to="`/admin/employees/profile/${item.id}`" class="btn btn-fill btn-info">
+                        <i class="nc-icon nc-badge"></i> {{item.id}}
+                    </router-link>
                 </th>
                 <td>{{item.nombre}}</td>
                 <td>{{item.apellidos}}</td>
@@ -25,11 +27,13 @@
                 <td>{{item.cargo}}</td>
                 <td>{{item.salario}}</td>
                 <td>{{item.departamento}}</td>
+                <!--
                 <th scope="row">
-                    <router-link :to="`/admin/employees/delete/${item.id}`" class="btn btn-danger">
-                        Eliminar
+                    <router-link :to="`/admin/employees/delete/${item.id}`" class="btn btn-fill btn-danger">
+                        Borrar
                     </router-link>
-                </th>                
+                </th>     
+                -->
             </tr> 
     <!--
             <tr v-for="item in data">
