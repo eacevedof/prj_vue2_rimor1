@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-
+import Toasted from 'vue-toasted'
 // LightBootstrap plugin
 import LightBootstrap from './light-bootstrap-main'
 
@@ -9,6 +9,7 @@ import LightBootstrap from './light-bootstrap-main'
 import routes from './routes/routes'
 // plugin setup
 Vue.use(VueRouter)
+Vue.use(Toasted)
 Vue.use(LightBootstrap)
 
 // configure router
@@ -20,7 +21,7 @@ const router = new VueRouter({
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  render: h => h(App), //originalmente yo en mi otro poryecto no he usado esto
-  router
+    el: '#app',
+    render: h => h(App), //originalmente yo en mi otro poryecto no he usado esto
+    router
 })

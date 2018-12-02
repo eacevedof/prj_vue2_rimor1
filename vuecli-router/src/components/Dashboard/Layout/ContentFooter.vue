@@ -5,7 +5,7 @@
             <nav>
                 <ul class="footer-menu">
                     <li>
-                        <router-link :to="{path:'/admin'}">Home</router-link>
+                        <router-link :to="{path:'/admin'}">Inicio</router-link>
                     </li>
                 </ul>
             </nav>

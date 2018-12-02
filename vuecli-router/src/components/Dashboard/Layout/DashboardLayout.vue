@@ -5,11 +5,11 @@
             <mobile-menu slot="content"></mobile-menu>    
             <sidebar-link to="/admin/employees">
                 <i class="nc-icon nc-chart-pie-35"></i>
-                <p>Employees</p>
+                <p>Empleados</p>
             </sidebar-link>
            <sidebar-link to="/admin/employees/new">
                 <i class="nc-icon nc-chart-pie-35"></i>
-                <p>New employee</p>
+                <p>Nuevo empleado</p>
             </sidebar-link>             
 <!--
             <sidebar-link to="/admin/overview">

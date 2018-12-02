@@ -66,14 +66,30 @@ export default {
         }
     },
     created: function () {
+        console.log(this,"THIS.LOADING...")
         let iPage = this.$route.params.id
         console.log("iPage - "+iPage)
         this.get_employees()
     },//created()
 
     methods:{
+        show_toasted(){
+            this.$toasted.show("Loading...",{ 
+                theme: "primary", 
+                position: "top-center", 
+                duration : 10000,
+                icon : {
+                    name : 'watch',
+                    after : true // this will append the icon to the end of content
+                }
+            })         
+        },
+        clear_toasted(){
+            this.$toasted.clear()
+        },
         
-        get_employees : function() {     
+        get_employees : function() {  
+            this.show_toasted()
             let id = this.$route.params.id
             if(id === undefined) id=1
             console.log("get_employees: "+id)      
@@ -86,6 +102,7 @@ export default {
                     totpages: response.data.pagination.totpages,
                     totregs: response.data.pagination.totregs
                 }
+                this.clear_toasted()
             },id)
         },//get_employees()
         

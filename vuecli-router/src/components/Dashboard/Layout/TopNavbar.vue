@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg">
         <!--topnavbar.vue-->
         <div class="container-fluid">
-            <a class="navbar-brand" href="/admin">Home</a>
+            <a class="navbar-brand" href="/admin">Inicio</a>
             <button type="button"
             class="navbar-toggler navbar-toggler-right"
             :class="{toggled: $sidebar.showSidebar}"
